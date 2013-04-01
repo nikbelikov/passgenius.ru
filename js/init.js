@@ -46,18 +46,18 @@ initInnerElements = function(){
 }
 
 initChangeType = function(){
-	$('#hard').on('click', function(){
+	$$('#hard').tap(function(){
 		chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!";%:?*()_+=-~/<>,.[]{}';
 		length = 20;
 	});
-	$('#web, #simple').on('click', function(){
+	$$('#web, #simple').tap(function(){
 		chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 		length = 10;
 	});
-	$('#simple').on('click', function(){
+	$$('#simple').tap(function(){
 		length = 6;
 	});
-	$('#pin').on('click', function(){
+	$$('#pin').tap(function(){
 		chars = '1234567890';
 		length = 4;
 	});
