@@ -1,0 +1,308 @@
+/* ==========================================================================
+   Imports and Variables
+   ========================================================================== */
+@import "/lib/mixins.less";
+
+@img-folder: "../img"; //path to image folder
+
+/* ==========================================================================
+   Common
+   ========================================================================== */
+html {
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+a {
+	text-decoration: none;
+
+	&.brown {
+		color: #5b320c;
+		border-bottom: 2px solid #784c23;
+	}
+	&.grey {
+		color: #3c4042;
+		border-bottom: 2px solid #3c4042;
+	}
+}
+p {
+	width: 400px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto 35px;
+	line-height: 31px;
+	font-weight: bold;
+}
+.wrapper {
+	width: 640px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+	& .content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+#black-box {
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+.dashed {
+	border-bottom: 2px dashed #3c4042;
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Transitions
+   ========================================================================== */
+#desktop #desktop-p-img img {
+	.transition (all .5s ease);
+}
+
+/* ==========================================================================
+   Disabled tab highLight colors
+   ========================================================================== */
+.btn, .dashed {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-container {
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+	padding: 22px 157px;
+	margin: 0 auto 40px;
+	color: white;
+	.gradient (#54585a, #272a2b, #54585a);
+	border: 2px solid #141414;
+	.border-radius (10px);
+	font-size: 27px;
+	text-shadow:0 -1px 0 #252628;
+	.box-shadow (0 1px 1px rgba(0, 0, 0, 0.3));
+	cursor: pointer;
+
+	&.active {
+		.gradient (#272a2b, #54585a, #272a2b);
+		cursor: default;
+	}
+}
+.list-btn {
+	overflow: hidden;
+	list-style: none;
+	margin-bottom: 30px;
+
+	& li {
+		float: left;
+
+		&:first-child span { .border-radius (10px 0 0 10px); }
+		&:last-child span { .border-radius (0 10px 10px 0); }
+		& span {
+			width: 200px;
+			padding: 17px 0;
+			margin: 0;
+			margin-left: -2px;
+			position: relative;
+			left: -10px;
+			font-size: 27px;
+			border-radius: 0;
+			text-align: center;
+		}
+	}
+}
+.small-list-btn {
+	& li {			
+		& span {
+			width: 143px;
+			font-size: 23px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Inner moments
+   ========================================================================== */
+.inner {
+	background: url('@{img-folder}/bg-inner.jpg') center center;
+	position: relative;
+	top: -25px;
+	padding: 40px 20px 20px;
+	box-shadow: inset 0 10px 40px rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid #FFF;
+	display: none;
+
+	&:before {
+		content:'';
+		display: block;
+		width: 100%;
+		height: 16px;
+		background: url('@{img-folder}/bg-inner-arrow.png');
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	& ul {
+		list-style: none;
+		padding: 0;
+
+		& li {
+			font-size: 23px;
+			color: #FFF;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+			margin-bottom: 20px;
+			line-height: 31px;
+			text-align: center;
+		}
+	}
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+#header {
+	height: 89px;
+	.gradient (#54585a, #272a2b, #54585a);
+	.box-shadow (0 0 40px rgba(0,0,0,1));
+	position: relative;
+	z-index: 10;
+
+	& .list-btn {
+		width: 424px;
+		margin: 0 auto;
+		position: relative;
+		top: 15px;
+	}
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.main-content, .main-about {
+	overflow: hidden;
+	padding-top: 35px;
+}
+.main-content {
+	background: url('@{img-folder}/bg-main.jpg');
+
+	& p {
+		color: #5B320C;
+		text-shadow: 0 1px 0 #ECC49C;
+	}
+}
+.main-about {
+	background: url('@{img-folder}/bg-about.png');
+
+	& p {
+		color: #3c4042;
+		text-shadow: 0 1px 0 #e3e3e3;
+	}
+}
+#icon {
+	margin-top: 10px;
+}
+.canvas-wrapper {
+	padding-left: 40px;
+	margin-bottom: 40px;
+
+	& .canvas {
+		width: 560px;
+		height: 368px;
+		background: white;
+		margin: 0 auto;
+		.box-shadow (0 20px 40px rgba(0, 0, 0, 0.3));
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+
+		& .password {
+			width: auto;
+			margin: 0;
+			color: #4c4f51;
+			text-shadow: 0 -1px 0 #292929;
+			font-size: 70px;
+			line-height: 86px;
+
+			&.small {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+	}
+}
+.social a {
+	margin: 0 10px;
+}
+
+/* ==========================================================================
+   Desktop
+   ========================================================================== */
+body.desktop {
+	background: #58612c url('@{img-folder}/bg-desktop.jpg') center center;
+
+	& #footer {
+		height: 50px;
+	}
+}
+#desktop {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	& p, & a {
+		color: white !important;
+		text-shadow: 0 1px 5px #6D3400;
+		font-size: 14px;
+	}
+	#desktop-p-img {
+		height: 80px;
+		position: relative;
+
+		img {
+			width: 79px;
+			height: 79px;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			margin-left: -40px;
+			z-index: 0;
+
+			&[src*=pg] {
+				z-index: 2;
+
+				&:hover {
+					.opacity (0);
+					left:47%;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer {
+	width: 640px;
+	margin: -1px auto 0;
+	height: 1px;
+	position: relative;
+}
