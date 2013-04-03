@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>PassGenius - генератор паролей для iPhone</title>
-	<meta name="keywords" content="генератор, пароль, iPhone" />
-	<meta name="description" content="Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
+	<title>PassGenius - Генератор паролей для iPhone</title>
+	<meta name="keywords" content="генератор, пароль, iphone, passgenius" />
+	<meta name="description" content="PassGenius - генератор паролей для iPhone. Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
 
 	<noscript><meta http-equiv="refresh" content="0;url=nojs.php"/></noscript>
 
@@ -80,8 +80,8 @@
 		<p><span class="dashed">История проекта</span></p>
 		<div class="inner">
 			<ul>
-				<li>18 марта 2013 - регистрация домена passgenius.ru, выложена "заглушка" на сайт.</li>
 				<li>1 апреля 2013 - запуск проекта, вылиты исходники на passgenius.ru и github.</li>
+				<li>18 марта 2013 - регистрация домена passgenius.ru, выложена "заглушка" на сайт.</li>
 			</ul>
 		</div>
 
