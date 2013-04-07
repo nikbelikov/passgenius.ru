@@ -3,7 +3,7 @@ $(document).ready(function(){
 	initListBtn();			// button lists
 	initMainTabs();			// main tabs
 	initInnerElements();	// inner hidden text (with ios background)
-	initChangeType();		// change type of pussword
+	initChangeType();		// change type of password
 	initGeneratePass();		// generate password
 });
 
