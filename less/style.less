@@ -46,7 +46,7 @@ p {
 	height: auto !important;
 	height: 100%;
 
-	& .content {
+	.content {
 		display: none;
 
 		&.active {
@@ -71,7 +71,8 @@ p {
 /* ==========================================================================
    Transitions
    ========================================================================== */
-#desktop #desktop-p-img img {
+#desktop #desktop-p-img img,
+#github, #twitter, #mail {
 	.transition (all .5s ease);
 }
 
@@ -111,12 +112,12 @@ p {
 	list-style: none;
 	margin-bottom: 35px;
 
-	& li {
+	li {
 		float: left;
 
 		&:first-child span { .border-radius (10px 0 0 10px); }
 		&:last-child span { .border-radius (0 10px 10px 0); }
-		& span {
+		span {
 			width: 200px;
 			padding: 17px 0;
 			margin: 0;
@@ -130,8 +131,8 @@ p {
 	}
 }
 .small-list-btn {
-	& li {			
-		& span {
+	li {			
+		span {
 			width: 143px;
 			font-size: 23px;
 		}
@@ -160,11 +161,11 @@ p {
 		top: 0;
 		left: 0;
 	}
-	& ul {
+	ul {
 		list-style: none;
 		padding: 0;
 
-		& li {
+		li {
 			font-size: 23px;
 			color: #FFF;
 			text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
@@ -185,7 +186,7 @@ p {
 	position: relative;
 	z-index: 10;
 
-	& .list-btn {
+	.list-btn {
 		width: 424px;
 		margin: 0 auto;
 		position: relative;
@@ -203,7 +204,7 @@ p {
 .main-content {
 	background: url('@{img-folder}/bg-main.jpg');
 
-	& p {
+	p {
 		color: #5B320C;
 		text-shadow: 0 1px 0 #ECC49C;
 	}
@@ -211,7 +212,7 @@ p {
 .main-about {
 	background: url('@{img-folder}/bg-about.png');
 
-	& p {
+	p {
 		color: #3c4042;
 		text-shadow: 0 1px 0 #e3e3e3;
 	}
@@ -223,7 +224,7 @@ p {
 	padding-left: 40px;
 	margin-bottom: 40px;
 
-	& .canvas {
+	.canvas {
 		width: 560px;
 		height: 368px;
 		background: white;
@@ -233,7 +234,7 @@ p {
 		display: table-cell;
 		vertical-align: middle;
 
-		& .password {
+		.password {
 			width: auto;
 			margin: 0;
 			color: #4c4f51;
@@ -258,7 +259,7 @@ p {
 body.desktop {
 	background: #58612c url('@{img-folder}/bg-desktop.jpg') center center;
 
-	& #footer {
+	#footer {
 		height: 50px;
 	}
 }
@@ -267,7 +268,7 @@ body.desktop {
 	height: 100%;
 	text-align: center;
 
-	& p, & a {
+	p, a {
 		color: white !important;
 		text-shadow: 0 1px 5px #6D3400;
 		font-size: 14px;
@@ -300,27 +301,34 @@ body.desktop {
 		left: 40px;
 		bottom: 0px;
 
-		& a {
+		a {
 			background: url('@{img-folder}/desktop-social.png');
 			display: block;
 			float: left;
 			margin-right: 15px;
 		}
-		& #git {
+		#github, #twitter, #mail {
+			opacity: 0.3;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		#github {
 			width: 28px;
 			height: 30px;
 		}
-		& #twitter {
+		#twitter {
 			width: 36px;
 			height: 30px;
 			background-position: -42px 0px;
 		}
-		& #mail {
+		#mail {
 			width: 34px;
 			height: 30px;
 			background-position: -91px 0px;
 		}
-		& #download {
+		#download {
 			width: 36px;
 			height: 30px;
 			background-position: -137px 0px;
