@@ -50,7 +50,12 @@
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
+				<span id="help-link">?</span>
 				<p class="password small">Нажмите на "Создать"</p>
+				<div id="help">
+					<div id="help-close"></div>
+					<img src="img/help.png" alt="help">
+				</div>
 			</div>
 		</div>
 

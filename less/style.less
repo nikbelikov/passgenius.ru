@@ -72,7 +72,8 @@ p {
    Transitions
    ========================================================================== */
 #desktop #desktop-p-img img,
-#github, #twitter, #mail {
+#github, #twitter, #mail,
+#help-link {
 	.transition (all .5s ease);
 }
 
@@ -223,6 +224,7 @@ p {
 .canvas-wrapper {
 	padding-left: 40px;
 	margin-bottom: 40px;
+	position: relative;
 
 	.canvas {
 		width: 560px;
@@ -246,6 +248,37 @@ p {
 				font-size: 40px;
 				line-height: 50px;
 			}
+		}
+		#help-link, #help-close {
+			position: absolute;
+			top: 10px;
+			right: 50px;
+			font-size: 26px;
+			font-weight: bold;
+			color: #4c4f51;
+			text-shadow: 0 -1px 0 #292929;
+			padding: 10px;
+			cursor: pointer;
+		}
+		#help-link {
+			opacity: 0.3;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+		#help-close {
+			width: 58px;
+			height: 58px;
+			background: url('../img/help-close.png') center center no-repeat;
+			left: -2px;
+			top: 8px;
+		}
+		#help {
+			position: absolute;
+			top: 16px;
+			display: none;
+			right: -8px;
 		}
 	}
 }

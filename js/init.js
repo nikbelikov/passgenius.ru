@@ -5,6 +5,7 @@ $(document).ready(function(){
 	initInnerElements();	// inner hidden text (with ios background)
 	initChangeType();		// change type of password
 	initGeneratePass();		// generate password
+	initHelp();				// help for user
 });
 
 $(window).load(function(){
@@ -84,5 +85,16 @@ initGeneratePass = function(){
 		if (compl === 0) { $('.password').addClass('small'); }
 		else { $('.password').removeClass('small'); }
 		$('.password').html(GeneratePass(chars, length)).hide().fadeIn();
+	});
+};
+
+initHelp = function(){
+	$$('#help-link').tap(function(){
+		$('#help').fadeIn(200);
+		$(this).addClass('active');
+	});
+	$$('#help-close').tap(function(){
+		$('#help').fadeOut(200);
+		$('#help-link').removeClass('active');
 	});
 };
