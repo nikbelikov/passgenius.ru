@@ -63,10 +63,6 @@ p {
 	top: 0;
 	z-index: 1000;
 }
-.dashed {
-	border-bottom: 2px dashed #3c4042;
-	cursor: pointer;
-}
 
 /* ==========================================================================
    Transitions
@@ -136,43 +132,6 @@ p {
 		span {
 			width: 143px;
 			font-size: 23px;
-		}
-	}
-}
-
-/* ==========================================================================
-   Inner moments
-   ========================================================================== */
-.inner {
-	background: url('@{img-folder}/bg-inner.jpg') center center;
-	position: relative;
-	top: -25px;
-	padding: 40px 20px 20px;
-	box-shadow: inset 0 10px 40px rgba(0, 0, 0, 0.5);
-	border-bottom: 1px solid #FFF;
-	display: none;
-
-	&:before {
-		content:'';
-		display: block;
-		width: 100%;
-		height: 16px;
-		background: url('@{img-folder}/bg-inner-arrow.png');
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-
-		li {
-			font-size: 23px;
-			color: #FFF;
-			text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
-			margin-bottom: 20px;
-			line-height: 31px;
-			text-align: center;
 		}
 	}
 }
