@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	initBrowserCheck();		// browser check
+	//initBrowserCheck();		// browser check
 	initListBtn();			// button lists
 	initMainTabs();			// main tabs
 	initInnerElements();	// inner hidden text (with ios background)
