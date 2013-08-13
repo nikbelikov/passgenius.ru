@@ -86,7 +86,7 @@
 		Разработка: <a class="grey" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
 		<p class="social">
-			<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>
+			<?/*<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>*/?>
 			<a href="https://twitter.com/_nikbelikov" target="_blank"><img src="img/icon-twitter.png" alt="twitter"></a>
 			<a href="mailto:nikbelikov@me.com"><img src="img/icon-mail.png" alt="mail"></a>
 			<a href="http://passgenius.ru/presentation/" target="_blank"><img src="img/icon-presentation.png" alt="presentation"></a>
