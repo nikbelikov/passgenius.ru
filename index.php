@@ -19,7 +19,7 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
-	<link rel="stylesheet" href="css/lib/normalize.css" type="text/css" media="screen, projection" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -63,7 +63,7 @@
 		
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
-		Разработка: <a class="brown" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 		<p><?php echo date('Y'); ?> (с)<br>
 		PassGenius.ru</p>
 	</div> <!-- .main-content -->
@@ -83,7 +83,7 @@
 		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
 		<p>Специально для iPhone.<br>
-		Разработка: <a class="grey" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+		Разработка: <a class="gray" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
 		<p class="social">
 			<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>

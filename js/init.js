@@ -92,7 +92,7 @@ initGeneratePass = function(){
 		var compl = $('#compl').find('.btn.active').parent().index();
 		if (compl === 0) { $('.password').addClass('small'); }
 		else { $('.password').removeClass('small'); }
-		$('.password').html(GeneratePass(chars, length)).hide().fadeIn();
+		$('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
 	});
 };
 

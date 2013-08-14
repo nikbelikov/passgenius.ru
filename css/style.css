@@ -1,3 +1,10 @@
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 html {
   height: 100%;
 }
@@ -6,7 +13,8 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Ubuntu",sans-serif;
+  color: #000;
   font-size: 14px;
   line-height: 20px;
 }
@@ -15,14 +23,14 @@ a {
   text-decoration: none;
 }
 
-a.brown {
-  color: #5b320c;
-  border-bottom: 2px solid #784c23;
+a.blue {
+  color: #108cff;
+  border-bottom: 2px solid #108cff;
 }
 
-a.grey {
-  color: #3c4042;
-  border-bottom: 2px solid #3c4042;
+a.gray {
+  color: #000;
+  border-bottom: 2px solid #000;
 }
 
 p {
@@ -31,7 +39,6 @@ p {
   text-align: center;
   margin: 0 auto 35px;
   line-height: 31px;
-  font-weight: bold;
 }
 
 .wrapper {
@@ -43,17 +50,25 @@ p {
 }
 
 .wrapper .content {
-  display: none;
+  position: relative;
+  top: 100px;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .wrapper .content.active {
-  display: block;
+  top: 0;
+  opacity: 1;
+  height: auto;
 }
 
 #black-box {
   width: 100%;
   height: 100%;
-  background: #000 url("@{img-folder/preloader.gif") center center no-repeat;
+  background: #000 url(../img/preloader.gif) center center no-repeat;
   position: fixed;
   left: 0;
   top: 0;
@@ -83,26 +98,16 @@ p {
   display: inline-block;
   padding: 22px 157px;
   margin: 0 auto 40px;
-  color: #fff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #54585a), color-stop(100%, #272a2b));
-  background-image: -webkit-linear-gradient(#54585a,#272a2b);
-  background-image: -ms-linear-gradient(#54585a,#272a2b);
-  background-image: -webkit-linear-gradient(#54585a, #272a2b);
-  background-image: linear-gradient(#54585a,#272a2b);
-  border: 2px solid #141414;
+  color: #000;
+  border: 2px solid #108cff;
   border-radius: 10px;
   font-size: 27px;
-  text-shadow: 0 -1px 0 #252628;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
 .btn.active {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #272a2b), color-stop(100%, #54585a));
-  background-image: -webkit-linear-gradient(#272a2b,#54585a);
-  background-image: -ms-linear-gradient(#272a2b,#54585a);
-  background-image: -webkit-linear-gradient(#272a2b, #54585a);
-  background-image: linear-gradient(#272a2b,#54585a);
+  background: #108cff;
+  color: #fff;
   cursor: default;
 }
 
@@ -143,12 +148,6 @@ p {
 
 #header {
   height: 89px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #54585a), color-stop(100%, #272a2b));
-  background-image: -webkit-linear-gradient(#54585a,#272a2b);
-  background-image: -ms-linear-gradient(#54585a,#272a2b);
-  background-image: -webkit-linear-gradient(#54585a, #272a2b);
-  background-image: linear-gradient(#54585a,#272a2b);
-  box-shadow: 0 0 40px #000;
   position: relative;
   z-index: 10;
 }
@@ -166,22 +165,12 @@ p {
   padding-top: 35px;
 }
 
-.main-content {
-  background: url(/img/bg-main.jpg);
-}
-
 .main-content p {
-  color: #5b320c;
-  text-shadow: 0 1px 0 #ecc49c;
-}
-
-.main-about {
-  background: url(/img/bg-about.png);
+  color: #108cff;
 }
 
 .main-about p {
-  color: #3c4042;
-  text-shadow: 0 1px 0 #e3e3e3;
+  color: #000;
 }
 
 #icon {
@@ -219,13 +208,19 @@ p {
   line-height: 50px;
 }
 
+.canvas-wrapper .canvas .password.selectable {
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
 .canvas-wrapper .canvas #help-link,
 .canvas-wrapper .canvas #help-close {
   position: absolute;
   top: 10px;
   right: 50px;
   font-size: 26px;
-  font-weight: bold;
   color: #4c4f51;
   text-shadow: 0 -1px 0 #292929;
   padding: 10px;
@@ -260,7 +255,7 @@ p {
 }
 
 body.desktop {
-  background: #58612c url("@{img-folder/bg-desktop.jpg") center center;
+  background: #58612c url(../img/bg-desktop.jpg) center center;
 }
 
 body.desktop #footer {
@@ -311,7 +306,7 @@ body.desktop #footer {
 }
 
 #desktop #social a {
-  background: url("@{img-folder/desktop-social.png");
+  background: url(../img/desktop-social.png);
   display: block;
   float: left;
   margin-right: 15px;

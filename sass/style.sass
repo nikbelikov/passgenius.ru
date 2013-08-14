@@ -1,9 +1,15 @@
 /* IMPORT & VARS */
 @import "compass"
 
-
+$white: #fff
+$border: #585858
+$main-color: #000
+$blue: #108CFF
 
 /* COMMON */
+*
+	user-select: none
+
 html
 	height: 100%
 
@@ -11,19 +17,20 @@ body
 	width: 100%
 	height: 100%
 	margin: 0
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family: 'Ubuntu', sans-serif
+	color: $main-color
 	font-size: 14px
 	line-height: 20px
 
 a
 	text-decoration: none
 
-	&.brown
-		color: #5b320c
-		border-bottom: 2px solid #784c23
-	&.grey
-		color: #3c4042
-		border-bottom: 2px solid #3c4042
+	&.blue
+		color: $blue
+		border-bottom: 2px solid $blue
+	&.gray
+		color: $main-color
+		border-bottom: 2px solid $main-color
 
 p
 	width: 400px
@@ -31,7 +38,6 @@ p
 	text-align: center
 	margin: 0 auto 35px
 	line-height: 31px
-	font-weight: bold
 
 .wrapper
 	width: 640px
@@ -41,15 +47,22 @@ p
 	height: 100%
 
 	.content
-		display: none
+		position: relative
+		top: 100px
+		height: 0
+		opacity: 0
+		padding: 0
+		transition: all .5s ease
 
 		&.active
-			display: block
+			top: 0
+			opacity: 1
+			height: auto
 
 #black-box
 	width: 100%
 	height: 100%
-	background: black url('@{img-folder/preloader.gif') center center no-repeat
+	background: black url(../img/preloader.gif) center center no-repeat
 	position: fixed
 	left: 0
 	top: 0
@@ -79,17 +92,15 @@ p
 	display: inline-block
 	padding: 22px 157px
 	margin: 0 auto 40px
-	color: white
-	+background-image(linear-gradient(#54585a, #272a2b))
-	border: 2px solid #141414
+	color: $main-color
+	border: 2px solid $blue
 	border-radius: 10px
 	font-size: 27px
-	text-shadow: 0 -1px 0 #252628
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
 	cursor: pointer
 
 	&.active
-		+background-image(linear-gradient(#272a2b, #54585a))
+		background: $blue
+		color: $white
 		cursor: default
 
 .list-btn
@@ -126,8 +137,6 @@ p
 /* Header */
 #header
 	height: 89px
-	+background-image(linear-gradient(#54585a, #272a2b))
-	box-shadow: 0 0 40px rgba(0,0,0,1)
 	position: relative
 	z-index: 10
 
@@ -145,19 +154,16 @@ p
 	padding-top: 35px
 
 .main-content
-	background: url(/img/bg-main.jpg)
+	//background: url(/img/bg-main.jpg)
 
 	p
-		color: #5B320C
-		text-shadow: 0 1px 0 #ECC49C
-
+		color: $blue
 
 .main-about
-	background: url(/img/bg-about.png)
+	//background: url(/img/bg-about.png)
 
 	p
-		color: #3c4042
-		text-shadow: 0 1px 0 #e3e3e3
+		color: $main-color
 
 
 #icon
@@ -189,13 +195,14 @@ p
 			&.small
 				font-size: 40px
 				line-height: 50px
+			&.selectable
+				user-select: initial
 		
 		#help-link, #help-close
 			position: absolute
 			top: 10px
 			right: 50px
 			font-size: 26px
-			font-weight: bold
 			color: #4c4f51
 			text-shadow: 0 -1px 0 #292929
 			padding: 10px
@@ -227,7 +234,7 @@ p
 
 /* Desktop */
 body.desktop
-	background: #58612c url('@{img-folder/bg-desktop.jpg') center center
+	background: #58612c url(../img/bg-desktop.jpg) center center
 
 	#footer
 		height: 50px
@@ -268,7 +275,7 @@ body.desktop
 		bottom: 0px
 
 		a
-			background: url('@{img-folder/desktop-social.png')
+			background: url(../img/desktop-social.png)
 			display: block
 			float: left
 			margin-right: 15px
