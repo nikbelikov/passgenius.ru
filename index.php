@@ -20,6 +20,7 @@
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -50,17 +51,12 @@
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
-				<span id="help-link">?</span>
 				<p class="password small">Нажмите на "Создать"</p>
-				<div id="help">
-					<div id="help-close"></div>
-					<img src="img/help.png" alt="help">
-				</div>
 			</div>
 		</div>
 
-		<div id="generate-btn" class="btn-container"><span class="btn">Создать</span></div>
-		
+		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span></div>
+
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
 		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
@@ -79,17 +75,17 @@
 			</div>
 		</div>
 
-		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на nikbelikov@me.com.</p>
+		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a class="blue" href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
 		<p>Специально для iPhone.<br>
-		Разработка: <a class="gray" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
 		<p class="social">
-			<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>
-			<a href="https://twitter.com/_nikbelikov" target="_blank"><img src="img/icon-twitter.png" alt="twitter"></a>
-			<a href="mailto:nikbelikov@me.com"><img src="img/icon-mail.png" alt="mail"></a>
-			<a href="http://passgenius.ru/presentation/" target="_blank"><img src="img/icon-presentation.png" alt="presentation"></a>
+			<a class="icon-github" href="https://github.com/nikbelikov/passgenius.ru" target="_blank"></a>
+			<a class="icon-twitter" href="https://twitter.com/_nikbelikov" target="_blank"></a>
+			<a class="icon-envelope" href="mailto:nikbelikov@me.com"></a>
+			<a class="icon-folder-open" href="http://passgenius.ru/presentation/" target="_blank"></a>
 		</p>
 
 		<p><?php echo date('Y'); ?> (с)<br>

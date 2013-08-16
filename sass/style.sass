@@ -2,16 +2,18 @@
 @import "compass"
 
 $white: #fff
-$border: #585858
 $main-color: #000
+$gray: #555
 $blue: #108CFF
 
 /* COMMON */
 *
 	user-select: none
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
 
 html
 	height: 100%
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=30&opacity=14)
 
 body
 	width: 100%
@@ -27,10 +29,20 @@ a
 
 	&.blue
 		color: $blue
-		border-bottom: 2px solid $blue
+		border-bottom: 1px solid $blue
+		transition: color .2s ease, border .2s ease
+
+		&:active
+			color: $main-color
+			border-bottom: 1px solid $main-color
+
 	&.gray
 		color: $main-color
-		border-bottom: 2px solid $main-color
+		border-bottom: 1px solid $main-color
+
+		&:active
+			color: $blue
+			border-bottom: 1px solid $blue
 
 p
 	width: 400px
@@ -48,7 +60,7 @@ p
 
 	.content
 		position: relative
-		top: 100px
+		top: 20px
 		height: 0
 		opacity: 0
 		padding: 0
@@ -70,20 +82,6 @@ p
 
 
 
-/* Transitions */
-#desktop #desktop-p-img img,
-#github, #twitter, #mail, #presentation,
-#help-link
-	transition: all .5s ease
-
-
-
-/* Disabled tab highLight colors */
-.btn, .dashed
-	-webkit-tap-highlight-color: rgba(0,0,0,0)
-
-
-
 /* Buttons */
 .btn-container
 	text-align: center
@@ -94,9 +92,15 @@ p
 	margin: 0 auto 40px
 	color: $main-color
 	border: 2px solid $blue
-	border-radius: 10px
+	border-radius: 30px
 	font-size: 27px
 	cursor: pointer
+	transition: background .5s ease, color .5s ease
+
+	&:active
+		transition: background .1s ease, color .1s ease
+		background: $blue
+		color: $white
 
 	&.active
 		background: $blue
@@ -112,9 +116,9 @@ p
 		float: left
 
 		&:first-child span
-			border-radius: 10px 0 0 10px
+			border-radius: 30px 0 0 30px
 		&:last-child span
-			border-radius: 0 10px 10px 0
+			border-radius: 0 30px 30px 0
 		span
 			width: 200px
 			padding: 17px 0
@@ -127,7 +131,7 @@ p
 			text-align: center
 
 .small-list-btn
-	li			
+	li
 		span
 			width: 143px
 			font-size: 23px
@@ -153,18 +157,11 @@ p
 	overflow: hidden
 	padding-top: 35px
 
-.main-content
-	//background: url(/img/bg-main.jpg)
+.main-content p
+	color: $blue
 
-	p
-		color: $blue
-
-.main-about
-	//background: url(/img/bg-about.png)
-
-	p
-		color: $main-color
-
+.main-about p
+	color: $main-color
 
 #icon
 	margin-top: 10px
@@ -179,16 +176,19 @@ p
 		height: 368px
 		background: white
 		margin: 0 auto
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3)
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)
 		text-align: center
 		display: table-cell
 		vertical-align: middle
+		border-radius: 30px
+
+		img
+			border-radius: 30px
 
 		.password
 			width: auto
 			margin: 0
-			color: #4c4f51
-			text-shadow: 0 -1px 0 #292929
+			color: $main-color
 			font-size: 70px
 			line-height: 86px
 
@@ -197,38 +197,24 @@ p
 				line-height: 50px
 			&.selectable
 				user-select: initial
-		
-		#help-link, #help-close
-			position: absolute
-			top: 10px
-			right: 50px
-			font-size: 26px
-			color: #4c4f51
-			text-shadow: 0 -1px 0 #292929
-			padding: 10px
-			cursor: pointer
-	
-		#help-link
-			opacity: 0.3
 
-			&.active
-				opacity: 1
-		
 		#help-close
 			width: 58px
 			height: 58px
 			background: url('../img/help-close.png') center center no-repeat
 			left: -2px
 			top: 8px
-	
+
 		#help
 			position: absolute
 			top: 16px
 			display: none
 			right: -8px
-	
+
 .social a
 	margin: 0 10px
+	font-size: 78px
+	color: $gray
 
 
 
@@ -248,6 +234,10 @@ body.desktop
 		color: white !important
 		text-shadow: 0 1px 5px #6D3400
 		font-size: 14px
+
+	#desktop #desktop-p-img img,
+	#github, #twitter, #mail, #presentation
+		transition: all .5s ease
 
 	#desktop-p-img
 		height: 80px
@@ -279,31 +269,31 @@ body.desktop
 			display: block
 			float: left
 			margin-right: 15px
-	
+
 		#github, #twitter, #mail, #presentation
 			opacity: 0.3
 
 			&:hover
 				opacity: 0.8
-		
+
 		#github
 			width: 28px
 			height: 30px
-	
+
 		#twitter
 			width: 36px
 			height: 30px
 			background-position: -42px 0px
-	
+
 		#mail
 			width: 34px
 			height: 30px
 			background-position: -91px 0px
-	
+
 		#presentation
 			width: 36px
 			height: 30px
-			background-position: -137px 0px	
+			background-position: -137px 0px
 
 
 
