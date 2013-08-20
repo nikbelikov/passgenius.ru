@@ -4,6 +4,7 @@
 $white: #fff
 $main-color: #000
 $gray: #555
+$gray-active: #a3a3a3
 $blue: #108CFF
 
 /* COMMON */
@@ -15,6 +16,29 @@ html
 	height: 100%
 	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=30&opacity=14)
 
+	&.dark
+		background: url(http://api.thumbr.it/whitenoise-361x370.png?background=1c1c1cff&noise=626262&density=30&opacity=23)
+
+		.main-content p, .main-about p, a.blue, a.gray:active, .btn
+			color: $gray-active
+
+		.password
+			color: $gray-active !important
+
+		a.blue
+			border-bottom: 1px solid $gray-active
+
+		a.blue:active, a.gray:active
+			color: $blue
+			border-bottom: 1px solid $blue
+
+		.btn
+			border: 2px solid $blue
+
+			&:active, &.active
+				color: $white
+				text-shadow: 0 0 10px $white
+
 body
 	width: 100%
 	height: 100%
@@ -23,6 +47,7 @@ body
 	color: $main-color
 	font-size: 14px
 	line-height: 20px
+
 
 a
 	text-decoration: none
@@ -95,16 +120,18 @@ p
 	border-radius: 30px
 	font-size: 27px
 	cursor: pointer
-	transition: background .5s ease, color .5s ease
+	transition: background .5s ease, color .5s ease, text-shadow .5s ease
 
 	&:active
 		transition: background .1s ease, color .1s ease
 		background: $blue
 		color: $white
+		text-shadow: 0 0 10px white
 
 	&.active
 		background: $blue
 		color: $white
+		text-shadow: 0 0 10px white
 		cursor: default
 
 .list-btn
@@ -170,20 +197,29 @@ p
 	padding-left: 40px
 	margin-bottom: 40px
 	position: relative
+	perspective: 1200px
+	transform-style: preserve-3d
 
 	.canvas
 		width: 560px
 		height: 368px
-		background: white
 		margin: 0 auto
-		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)
 		text-align: center
 		display: table-cell
 		vertical-align: middle
-		border-radius: 30px
+		transition: all .5s ease
+
+		&.flip
+			transform: rotateY(180deg)
+
+			.password
+				opacity: 0
+				transition: opacity .5s ease
 
 		img
-			border-radius: 30px
+			border-radius: 50%
+			width: 400px
+			height: auto
 
 		.password
 			width: auto
@@ -211,10 +247,25 @@ p
 			display: none
 			right: -8px
 
+.icon-list-ul
+	font-size: 30px
+	color: $gray
+	position: relative
+	left: 20px
+	top: 3px
+
+	&:active
+		color: $blue
+		text-shadow: 0 0 10px $blue
+
 .social a
 	margin: 0 10px
 	font-size: 78px
 	color: $gray
+
+	&:active
+		color: $blue
+		text-shadow: 0 0 10px $blue
 
 
 

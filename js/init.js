@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	//initBrowserCheck();		// browser check
+	initDayTime();			// dark or light theme
 	initListBtn();			// button lists
 	initMainTabs();			// main tabs
 	initInnerElements();	// inner hidden text (with ios background)
 	initChangeType();		// change type of password
 	initGeneratePass();		// generate password
-	initHelp();				// help for user
 });
 
 $(window).load(function(){
@@ -32,6 +32,14 @@ initBrowserCheck = function(){
 	}
 };
 
+initDayTime = function(){
+	var hour = new Date();
+	hour = hour.getHours();
+	if(hour >= 19 || hour <= 7 ) {
+		$('html').addClass('dark');
+	}
+};
+
 initListBtn = function(){
 	$$('.list-btn .btn').tap(function(){
 		$(this).parent().parent().find('.btn').removeClass('active');
@@ -43,8 +51,7 @@ initMainTabs = function(){
 	$$('#header .list-btn li').tap(function(){
 		var ind = $(this).index();
 		var $content = $('.wrapper .content');
-		$content.removeClass('active');
-		$content.eq(ind).addClass('active');
+		$content.removeClass('active').eq(ind).addClass('active');
 	});
 };
 
@@ -93,16 +100,5 @@ initGeneratePass = function(){
 		if (compl === 0) { $('.password').addClass('small'); }
 		else { $('.password').removeClass('small'); }
 		$('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
-	});
-};
-
-initHelp = function(){
-	$$('#help-link').tap(function(){
-		$('#help').fadeIn(200);
-		$(this).addClass('active');
-	});
-	$$('#help-close').tap(function(){
-		$('#help').fadeOut(200);
-		$('#help-link').removeClass('active');
 	});
 };

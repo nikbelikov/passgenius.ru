@@ -55,7 +55,7 @@
 			</div>
 		</div>
 
-		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span></div>
+		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i class="icon-list-ul"></i></div>
 
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
@@ -71,7 +71,7 @@
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
-				<img src="img/iphone.jpg" alt="iphone">
+				<img src="img/image.jpg" alt="iphone">
 			</div>
 		</div>
 
@@ -84,8 +84,7 @@
 		<p class="social">
 			<a class="icon-github" href="https://github.com/nikbelikov/passgenius.ru" target="_blank"></a>
 			<a class="icon-twitter" href="https://twitter.com/_nikbelikov" target="_blank"></a>
-			<a class="icon-envelope" href="mailto:nikbelikov@me.com"></a>
-			<a class="icon-folder-open" href="http://passgenius.ru/presentation/" target="_blank"></a>
+			<a class="icon-envelope-alt" href="mailto:nikbelikov@me.com"></a>
 		</p>
 
 		<p><?php echo date('Y'); ?> (с)<br>
