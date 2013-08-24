@@ -6,6 +6,7 @@ $(document).ready(function(){
 	initInnerElements();	// inner hidden text (with ios background)
 	initChangeType();		// change type of password
 	initGeneratePass();		// generate password
+	initLastPasswords();	// last passwords popup
 });
 
 $(window).load(function(){
@@ -100,5 +101,42 @@ initGeneratePass = function(){
 		if (compl === 0) { $('.password').addClass('small'); }
 		else { $('.password').removeClass('small'); }
 		$('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
+
+		// добавляем последние пароли в popup
+		if($('.last-passwords li').length != 5) {
+			$('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
+		}
+		else {
+			$('.last-passwords ul li:last').remove();
+			$('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
+		}
+
+		$('.icon-list-ul').removeClass('disabled');
+	});
+};
+
+function closeLastPass(){
+	$('.last-passwords').removeClass('bounceIn').addClass('bounceOut');
+	setTimeout(function(){
+		$('.last-passwords').removeClass('visible');
+		$('.wrapper').toggleClass('blur');
+	},500);
+}
+
+initLastPasswords = function(){
+	$$('#last-passwords').tap(function(){
+		if (!$('.icon-list-ul').hasClass('disabled')) {
+			$('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
+			$('.wrapper').toggleClass('blur');
+		}
+	});
+
+	$$('.last-passwords ul li').tap(function(){
+		$('.password').html($(this).html());
+		closeLastPass();
+	});
+
+	$$('.last-passwords .close').tap(function(){
+		closeLastPass();
 	});
 };

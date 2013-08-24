@@ -1,4 +1,4 @@
-/* IMPORT & VARS */
+/* Import & vars */
 @import "compass"
 
 $white: #fff
@@ -7,7 +7,7 @@ $gray: #555
 $gray-active: #a3a3a3
 $blue: #108CFF
 
-/* COMMON */
+/* Common */
 *
 	user-select: none
 	-webkit-tap-highlight-color: rgba(0,0,0,0)
@@ -39,6 +39,15 @@ html
 				color: $white
 				text-shadow: 0 0 10px $white
 
+		.last-passwords
+			ul li
+				background: none
+				color: white
+
+				&:active
+					background: $blue
+					text-shadow: 0 0 10px white
+
 body
 	width: 100%
 	height: 100%
@@ -61,14 +70,6 @@ a
 			color: $main-color
 			border-bottom: 1px solid $main-color
 
-	&.gray
-		color: $main-color
-		border-bottom: 1px solid $main-color
-
-		&:active
-			color: $blue
-			border-bottom: 1px solid $blue
-
 p
 	width: 400px
 	font-size: 25px
@@ -76,16 +77,23 @@ p
 	margin: 0 auto 35px
 	line-height: 31px
 
+sup
+	font-size: 10px
+
 .wrapper
 	width: 640px
 	margin: 0 auto
 	min-height: 100%
 	height: auto !important
 	height: 100%
+	transition: opacity .5s ease
+
+	&.blur
+		opacity: 0
 
 	.content
 		position: relative
-		top: 20px
+		top: -20px
 		height: 0
 		opacity: 0
 		padding: 0
@@ -253,10 +261,16 @@ p
 	position: relative
 	left: 20px
 	top: 3px
+	padding: 20px
+	margin-left: -20px
+	transition: opacity .5s ease
 
 	&:active
 		color: $blue
 		text-shadow: 0 0 10px $blue
+
+	&.disabled
+		opacity: 0.5
 
 .social a
 	margin: 0 10px
@@ -267,6 +281,72 @@ p
 		color: $blue
 		text-shadow: 0 0 10px $blue
 
+
+/* Last passwords */
+.last-passwords
+	width: 100%
+	height: 100%
+	text-align: center
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 5
+	display: none
+
+	&.visible
+		display: block
+
+	.close
+		width: 80px
+		height: 80px
+		position: fixed
+		top: 40px
+		right: 14px
+
+		&:before, &:after
+			content: ''
+			display: block
+			width: 50px
+			height: 3px
+			position: absolute
+			top: 29px
+			right: 34px
+			background: $gray
+			transform: rotate(45deg)
+
+		&:after
+			transform: rotate(-45deg)
+
+		&:active
+			color: $blue
+			text-shadow: 0 0 10px $blue
+
+	ul
+		$width: 500px
+		$height: 500px
+		width: $width
+		height: $height
+		position: absolute
+		left: 50%
+		top: 50%
+		font-size: 25px
+		list-style: none
+		margin: (-$height/2) 0 0 (-$width/2)
+		padding: 0
+
+		li
+			padding: 25px 0
+			background: white
+			border: 1px solid $blue
+			border-radius: 30px
+			margin-bottom: 30px
+			box-shadow: 0 0 10px rgba($blue, 0.3)
+			transition: background .2s ease, text-shadow .2s ease
+
+			&:active
+				background: $blue
+				color: white
+				text-shadow: 0 0 10px white
 
 
 /* Desktop */
@@ -348,7 +428,7 @@ body.desktop
 
 
 
-/* FOOTER */
+/* Footer */
 #footer
 	width: 640px
 	margin: -1px auto 0

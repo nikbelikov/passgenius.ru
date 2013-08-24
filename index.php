@@ -21,6 +21,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -55,7 +56,7 @@
 			</div>
 		</div>
 
-		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i class="icon-list-ul"></i></div>
+		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i id="last-passwords" class="icon-list-ul disabled"></i></div>
 
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
@@ -78,6 +79,11 @@
 		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a class="blue" href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
+		<p>Ранние версии:<br>
+			<a class="blue" href="http://passgenius.ru/v1.0/" target="_blank">v1.0</a>,
+			<a class="blue" href="http://passgenius.ru/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="http://passgenius.ru/v2.0/presentation" target="_blank">презентация</a>
+		</p>
+
 		<p>Специально для iPhone.<br>
 		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
@@ -88,10 +94,15 @@
 		</p>
 
 		<p><?php echo date('Y'); ?> (с)<br>
-		PassGenius.ru</p>
+		PassGenius.ru<sup>v3.0</sup></p>
 	</div> <!-- .main-about -->
 
 </div><!-- .wrapper -->
+
+<div class="last-passwords">
+	<div class="close"></div>
+	<ul></ul>
+</div>
 
 <footer id="footer"></footer>
 
