@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-	$('#black-box').addClass('hidden');
+	$('#black-box').fadeOut();
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
