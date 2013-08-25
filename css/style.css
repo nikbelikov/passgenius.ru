@@ -79,8 +79,6 @@ a {
 a.blue {
   color: #108cff;
   border-bottom: 1px solid #108cff;
-  -webkit-transition: color 0.2s ease,border 0.2s ease;
-  transition: color 0.2s ease,border 0.2s ease;
 }
 
 a.blue:active {
@@ -394,13 +392,13 @@ sup {
   border-radius: 30px;
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(16,140,255,0.3);
-  -webkit-transition: background 0.5s ease,text-shadow 0.5s ease,color 0.5s ease;
-  transition: background 0.5s ease,text-shadow 0.5s ease,color 0.5s ease;
+  -webkit-transition: background 0s ease 0.5s,text-shadow 0s ease 0.5s,color 0s ease 0.5s;
+  transition: background 0s ease 0.5s,text-shadow 0s ease 0.5s,color 0s ease 0.5s;
 }
 
 .last-passwords ul li:active {
-  -webkit-transition: background 0.1s ease,text-shadow 0.1s ease,color 0.1s ease;
-  transition: background 0.1s ease,text-shadow 0.1s ease,color 0.1s ease;
+  -webkit-transition: background 0s ease,text-shadow 0s ease,color 0s ease;
+  transition: background 0s ease,text-shadow 0s ease,color 0s ease;
   background: #108cff;
   color: #fff;
   text-shadow: 0 0 10px #fff;
