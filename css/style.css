@@ -271,7 +271,7 @@ sup {
 }
 
 .canvas-wrapper .canvas img {
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 50%;
 }
@@ -294,21 +294,6 @@ sup {
   -moz-user-select: initial;
   -ms-user-select: initial;
   user-select: initial;
-}
-
-.canvas-wrapper .canvas #help-close {
-  width: 58px;
-  height: 58px;
-  background: url("../img/help-close.png") center center no-repeat;
-  left: -2px;
-  top: 8px;
-}
-
-.canvas-wrapper .canvas #help {
-  position: absolute;
-  top: 16px;
-  display: none;
-  right: -8px;
 }
 
 .icon-list-ul {
