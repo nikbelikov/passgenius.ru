@@ -1,43 +1,26 @@
 $(document).ready(function(){
-	//initBrowserCheck();		// browser check
-	initDayTime();			// dark or light theme
+	initBrowserCheck();		// browser check
 	initListBtn();			// button lists
 	initMainTabs();			// main tabs
 	initInnerElements();	// inner hidden text (with ios background)
 	initChangeType();		// change type of password
 	initGeneratePass();		// generate password
-	initLastPasswords();	// last passwords popup
+	initHelp();				// help for user
 });
 
 $(window).load(function(){
-	$('#black-box').addClass('hidden');
+	$('#black-box').fadeOut(1000);
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-var length = 12;
+var length = 10;
 
 var env = $$.environment();	// environment (browser, isMobile ect.)
 
 initBrowserCheck = function(){
 	if ((!env.isMobile) || (env.isMobile && env.os.name !== 'ios')){
 		$('.wrapper, #footer').remove();
-		$.ajax('/inc/desktop.php',{
-			success: function(response){
-				$('body').addClass('desktop').prepend(response);
-			},
-			error: function(request, errorType, errorMessage){
-				$('body').addClass('desktop');
-			},
-			timeout: 3000
-		});
-	}
-};
-
-initDayTime = function(){
-	var hour = new Date();
-	hour = hour.getHours();
-	if(hour >= 19 || hour <= 7 ) {
-		$('html').addClass('dark');
+		$('body').addClass('desktop').prepend("<div id='desktop'><img src='img/desktop.png'><p>Зайдите на этот сайт с вашего iPhone и добавьте приложение на рабочий стол.</p><p id='desktop-p-img'><img class='img' src='img/icon-pg.png' alt='passgenius'><img class='img' src='img/icon-qr.png' alt='passgenius' width='79' height='79'></p><p id='footer'>Разработка: <a href='http://nikbelikov.ru/' target='_blank'>nikbelikov.ru</a></p><p id='social'><a id='github' href='https://github.com/nikbelikov/passgenius.ru' target='_blank'></a><a id='twitter' href='https://twitter.com/_nikbelikov' target='_blank'></a><a id='mail' href='mailto:nikbelikov@me.com'></a><a id='presentation' href='http://passgenius.ru/presentation/' target='_blank'></a></p></div>");
 	}
 };
 
@@ -52,7 +35,8 @@ initMainTabs = function(){
 	$$('#header .list-btn li').tap(function(){
 		var ind = $(this).index();
 		var $content = $('.wrapper .content');
-		$content.removeClass('active').eq(ind).addClass('active');
+		$content.removeClass('active');
+		$content.eq(ind).addClass('active');
 	});
 };
 
@@ -65,14 +49,14 @@ initInnerElements = function(){
 initChangeType = function(){
 	$$('#hard').tap(function(){
 		chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!";%:?*()_+=-~/<>,.[]{}';
-		length = 21;
+		length = 20;
 	});
 	$$('#web, #simple').tap(function(){
 		chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-		length = 12;
+		length = 10;
 	});
 	$$('#simple').tap(function(){
-		length = 8;
+		length = 6;
 	});
 	$$('#pin').tap(function(){
 		chars = '1234567890';
@@ -100,43 +84,17 @@ initGeneratePass = function(){
 		var compl = $('#compl').find('.btn.active').parent().index();
 		if (compl === 0) { $('.password').addClass('small'); }
 		else { $('.password').removeClass('small'); }
-		$('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
-
-		// добавляем последние пароли в popup
-		if($('.last-passwords li').length != 5) {
-			$('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
-		}
-		else {
-			$('.last-passwords ul li:last').remove();
-			$('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
-		}
-
-		$('.icon-list-ul').removeClass('disabled');
+		$('.password').html(GeneratePass(chars, length)).hide().fadeIn();
 	});
 };
 
-function closeLastPass(){
-	$('.last-passwords').removeClass('bounceIn').addClass('bounceOut');
-	setTimeout(function(){
-		$('.last-passwords').removeClass('visible');
-		$('.wrapper').toggleClass('blur');
-	},500);
-}
-
-initLastPasswords = function(){
-	$$('#last-passwords').tap(function(){
-		if (!$('.icon-list-ul').hasClass('disabled')) {
-			$('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
-			$('.wrapper').toggleClass('blur');
-		}
+initHelp = function(){
+	$$('#help-link').tap(function(){
+		$('#help').fadeIn(200);
+		$(this).addClass('active');
 	});
-
-	$$('.last-passwords ul li').tap(function(){
-		$('.password').html($(this).html());
-		closeLastPass();
-	});
-
-	$$('.last-passwords .close').tap(function(){
-		closeLastPass();
+	$$('#help-close').tap(function(){
+		$('#help').fadeOut(200);
+		$('#help-link').removeClass('active');
 	});
 };

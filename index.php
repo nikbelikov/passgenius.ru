@@ -31,7 +31,7 @@
 
 <body>
 
-<div id="black-box" class="vis"></div>
+<div id="black-box" class="vis"><i class="icon-unlock-alt icon-spin"></i></div>
 
 <div class="wrapper">
 
@@ -66,13 +66,12 @@
 	</div> <!-- .main-content -->
 
 	<div class="content main-about">
-		<p><img id="icon" src="img/icon-pg.png" alt="icon"></p>
 
 		<p>Проект PassGenius создавался для тех, кто дорожит своими аккаунтами в сети Интернет и использует правильные пароли.</p>
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
-				<img src="img/image.jpg" alt="iphone">
+				<img src="img/image.jpg" alt="image">
 			</div>
 		</div>
 

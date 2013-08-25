@@ -19,7 +19,10 @@ html
 	&.dark
 		background: url(http://api.thumbr.it/whitenoise-361x370.png?background=1c1c1cff&noise=626262&density=30&opacity=23)
 
-		.main-content p, .main-about p, a.blue, a.gray:active, .btn
+		#black-box
+			background: black
+
+		.main-content p, .main-about p, a.blue, a.gray:active, .btn, .icon-lock
 			color: $gray-active
 
 		.password
@@ -107,11 +110,24 @@ sup
 #black-box
 	width: 100%
 	height: 100%
-	background: black url(../img/preloader.gif) center center no-repeat
+	background: white
 	position: fixed
-	left: 0
 	top: 0
+	left: 0
 	z-index: 1000
+	transition: opacity 1s ease, z-index 0 linear 1s
+
+	&.hidden
+		opacity: 0
+		z-index: -1
+
+	.icon-spin
+		color: $blue
+		font-size: 80px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -41px 0 0 -25px
 
 
 
@@ -176,6 +192,7 @@ sup
 /* Header */
 #header
 	height: 89px
+	margin: 10px 0 20px
 	position: relative
 	z-index: 10
 
@@ -205,8 +222,6 @@ sup
 	padding-left: 40px
 	margin-bottom: 40px
 	position: relative
-	perspective: 1200px
-	transform-style: preserve-3d
 
 	.canvas
 		width: 560px
@@ -215,19 +230,11 @@ sup
 		text-align: center
 		display: table-cell
 		vertical-align: middle
-		transition: all .5s ease
-
-		&.flip
-			transform: rotateY(180deg)
-
-			.password
-				opacity: 0
-				transition: opacity .5s ease
 
 		img
-			border-radius: 50%
-			width: 400px
+			width: 100%
 			height: auto
+			border-radius: 50%
 
 		.password
 			width: auto
@@ -321,6 +328,9 @@ sup
 			color: $blue
 			text-shadow: 0 0 10px $blue
 
+			&:before, &:after
+				background: $blue
+
 	ul
 		$width: 500px
 		$height: 500px
@@ -341,12 +351,21 @@ sup
 			border-radius: 30px
 			margin-bottom: 30px
 			box-shadow: 0 0 10px rgba($blue, 0.3)
-			transition: background .2s ease, text-shadow .2s ease
+			transition: background .5s ease, text-shadow .5s ease, color .5s ease
 
 			&:active
+				transition: background .1s ease, text-shadow .1s ease, color .1s ease
 				background: $blue
 				color: white
 				text-shadow: 0 0 10px white
+
+.app-icon
+	text-align: center
+
+	.icon-lock
+		font-size: 200px
+		color: $gray
+
 
 
 /* Desktop */
@@ -401,7 +420,7 @@ body.desktop
 			float: left
 			margin-right: 15px
 
-		#github, #twitter, #mail, #presentation
+		#github, #twitter, #mail
 			opacity: 0.3
 
 			&:hover
@@ -420,11 +439,6 @@ body.desktop
 			width: 34px
 			height: 30px
 			background-position: -91px 0px
-
-		#presentation
-			width: 36px
-			height: 30px
-			background-position: -137px 0px
 
 
 
