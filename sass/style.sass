@@ -1,0 +1,440 @@
+/* Import & vars */
+@import "compass"
+
+$white: #fff
+$main-color: #000
+$gray: #555
+$gray-active: #a3a3a3
+$blue: #108CFF
+
+/* Common */
+*
+	user-select: none
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+
+html
+	height: 100%
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=30&opacity=14)
+
+	&.dark
+		background: url(http://api.thumbr.it/whitenoise-361x370.png?background=1c1c1cff&noise=626262&density=30&opacity=23)
+
+		#black-box
+			background: black
+
+		.main-content p, .main-about p, a.blue, a.gray:active, .btn, .icon-lock
+			color: $gray-active
+
+		.password
+			color: $gray-active !important
+
+		a.blue
+			border-bottom: 1px solid $gray-active
+
+		a.blue:active, a.gray:active
+			color: $blue
+			border-bottom: 1px solid $blue
+
+		.btn
+			border: 2px solid $blue
+
+			&:active, &.active
+				color: $white
+				text-shadow: 0 0 10px $white
+
+		.last-passwords
+			ul li
+				background: none
+				color: white
+
+				&:active
+					background: $blue
+					text-shadow: 0 0 10px white
+
+		body.desktop
+			background: url(/img/bg-black.jpg)
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
+
+			p
+				color: white
+
+
+body
+	width: 100%
+	height: 100%
+	margin: 0
+	font-family: 'Ubuntu', sans-serif
+	color: $main-color
+	font-size: 14px
+	line-height: 20px
+
+
+a
+	text-decoration: none
+
+	&.blue
+		color: $blue
+		border-bottom: 1px solid $blue
+
+		&:active
+			color: $main-color
+			border-bottom: 1px solid $main-color
+
+p
+	width: 400px
+	font-size: 25px
+	text-align: center
+	margin: 0 auto 35px
+	line-height: 31px
+
+sup
+	font-size: 10px
+
+.wrapper
+	width: 640px
+	margin: 0 auto
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	transition: opacity .5s ease
+
+	&.blur
+		opacity: 0
+
+	.content
+		position: relative
+		top: -20px
+		height: 0
+		opacity: 0
+		padding: 0
+		transition: all .5s ease
+
+		&.active
+			top: 0
+			opacity: 1
+			height: auto
+
+#black-box
+	width: 100%
+	height: 100%
+	background: white
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1000
+
+	.icon-spin
+		color: $blue
+		font-size: 80px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -41px 0 0 -25px
+
+
+
+/* Buttons */
+.btn-container
+	text-align: center
+
+.btn
+	display: inline-block
+	padding: 22px 157px
+	margin: 0 auto 40px
+	color: $main-color
+	border: 2px solid $blue
+	border-radius: 30px
+	font-size: 27px
+	cursor: pointer
+	transition: background .5s ease, color .5s ease, text-shadow .5s ease
+
+	&:active
+		transition: background .1s ease, color .1s ease
+		background: $blue
+		color: $white
+		text-shadow: 0 0 10px white
+
+	&.active
+		background: $blue
+		color: $white
+		text-shadow: 0 0 10px white
+		cursor: default
+
+.list-btn
+	overflow: hidden
+	list-style: none
+	margin-bottom: 35px
+
+	li
+		float: left
+
+		&:first-child span
+			border-radius: 30px 0 0 30px
+		&:last-child span
+			border-radius: 0 30px 30px 0
+		span
+			width: 200px
+			padding: 17px 0
+			margin: 0
+			margin-left: -2px
+			position: relative
+			left: -10px
+			font-size: 27px
+			border-radius: 0
+			text-align: center
+
+.small-list-btn
+	li
+		span
+			width: 143px
+			font-size: 23px
+
+
+
+/* Header */
+#header
+	height: 89px
+	margin: 10px 0 20px
+	position: relative
+	z-index: 10
+
+	.list-btn
+		width: 424px
+		margin: 0 auto
+		position: relative
+		top: 15px
+
+
+
+/* Content */
+.main-content, .main-about
+	overflow: hidden
+	padding-top: 35px
+
+.main-content p
+	color: $blue
+
+.main-about p
+	color: $main-color
+
+#icon
+	margin-top: 10px
+
+.canvas-wrapper
+	padding-left: 40px
+	margin-bottom: 40px
+	position: relative
+
+	.canvas
+		width: 560px
+		height: 368px
+		margin: 0 auto
+		text-align: center
+		display: table-cell
+		vertical-align: middle
+
+		img
+			width: 70%
+			height: auto
+			border-radius: 50%
+
+		.password
+			width: auto
+			margin: 0
+			color: $main-color
+			font-size: 70px
+			line-height: 86px
+
+			&.small
+				font-size: 40px
+				line-height: 50px
+			&.selectable
+				user-select: initial
+
+.icon-list-ul
+	font-size: 30px
+	color: $gray
+	position: relative
+	left: 20px
+	top: 3px
+	padding: 20px
+	margin-left: -20px
+	transition: opacity .5s ease
+
+	&:active
+		color: $blue
+		text-shadow: 0 0 10px $blue
+
+	&.disabled
+		opacity: 0.5
+
+.social a
+	margin: 0 10px
+	font-size: 78px
+	color: $gray
+
+	&:active
+		color: $blue
+		text-shadow: 0 0 10px $blue
+
+
+/* Last passwords */
+.last-passwords
+	width: 100%
+	height: 100%
+	text-align: center
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 5
+	display: none
+
+	&.visible
+		display: block
+
+	.close
+		width: 80px
+		height: 80px
+		position: fixed
+		top: 40px
+		right: 14px
+
+		&:before, &:after
+			content: ''
+			display: block
+			width: 50px
+			height: 3px
+			position: absolute
+			top: 29px
+			right: 34px
+			background: $gray
+			transform: rotate(45deg)
+
+		&:after
+			transform: rotate(-45deg)
+
+		&:active
+			color: $blue
+			text-shadow: 0 0 10px $blue
+
+			&:before, &:after
+				background: $blue
+
+	ul
+		$width: 500px
+		$height: 500px
+		width: $width
+		height: $height
+		position: absolute
+		left: 50%
+		top: 50%
+		font-size: 25px
+		list-style: none
+		margin: (-$height/2) 0 0 (-$width/2)
+		padding: 0
+
+		li
+			padding: 25px 0
+			background: white
+			border: 1px solid $blue
+			border-radius: 30px
+			margin-bottom: 30px
+			box-shadow: 0 0 10px rgba($blue, 0.3)
+			transition: background 0s ease .5s, text-shadow 0s ease .5s, color 0s ease .5s
+
+			&:active
+				transition: background 0s ease, text-shadow 0s ease, color 0s ease
+				background: $blue
+				color: white
+				text-shadow: 0 0 10px white
+
+.app-icon
+	text-align: center
+
+	.icon-lock
+		font-size: 200px
+		color: $gray
+
+
+
+/* Desktop */
+body.desktop
+	background: url(/img/bg-white.jpg)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+
+	color: $gray
+
+	#footer
+		width: 100%
+		height: 50px
+		position: absolute
+		bottom: 22px
+
+	*
+		user-select: initial
+
+#desktop
+	width: 100%
+	height: 100%
+	text-align: center
+
+	.container
+		position: relative
+		z-index: 1
+		height: 100%
+
+	p
+		font-size: 15px
+
+	.desktop-text
+		font-size: 15px
+		position: absolute
+		bottom: 130px
+		left: 50%
+		margin-left: -200px
+
+	#social
+		position: fixed
+		left: 50%
+		bottom: 50px
+		width: auto
+		margin-left: -70px
+
+		a
+			display: block
+			float: left
+			margin-right: 15px
+			font-size: 40px
+			opacity: 0.5
+			color: $blue
+			transition: opacity .3s ease, text-shadow .3s ease
+			border: none
+			bottom: 10px
+
+			&:hover
+				opacity: 0.8
+				text-shadow: 0 0 10px $blue
+
+			&:last-child
+				margin-right: 0
+
+	a
+		color: $blue
+		transition: border .3s ease
+		border-bottom: 1px solid $blue
+
+		&:hover
+			border-bottom: 1px solid transparent
+
+
+
+/* Footer */
+#footer
+	width: 640px
+	margin: -1px auto 0
+	height: 1px
+	position: relative

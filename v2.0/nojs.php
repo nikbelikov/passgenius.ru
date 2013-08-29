@@ -10,8 +10,7 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/nojs.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/nojs.css" type="text/css" media="screen, projection" />
 </head>
 
 <body>
