@@ -62,6 +62,17 @@ html.dark .last-passwords ul li:active {
   text-shadow: 0 0 10px #fff;
 }
 
+html.dark body.desktop {
+  background: url(/img/bg-black.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+html.dark body.desktop p {
+  color: #fff;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -414,11 +425,25 @@ sup {
 }
 
 body.desktop {
-  background: #58612c url(../img/bg-desktop.jpg) center center;
+  background: url(/img/bg-white.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #555;
 }
 
 body.desktop #footer {
+  width: 100%;
   height: 50px;
+  position: absolute;
+  bottom: 22px;
+}
+
+body.desktop * {
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
 }
 
 #desktop {
@@ -427,86 +452,63 @@ body.desktop #footer {
   text-align: center;
 }
 
-#desktop p,
-#desktop a {
-  color: #fff !important;
-  text-shadow: 0 1px 5px #6d3400;
-  font-size: 14px;
-}
-
-#desktop #desktop #desktop-p-img img,
-#desktop #github,
-#desktop #twitter,
-#desktop #mail,
-#desktop #presentation {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#desktop #desktop-p-img {
-  height: 80px;
+#desktop .container {
   position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
-#desktop #desktop-p-img img {
-  width: 79px;
-  height: 79px;
+#desktop p {
+  font-size: 15px;
+}
+
+#desktop .desktop-text {
+  font-size: 15px;
   position: absolute;
+  bottom: 130px;
   left: 50%;
-  top: 0;
-  margin-left: -40px;
-  z-index: 0;
-}
-
-#desktop #desktop-p-img img[src*=pg] {
-  z-index: 2;
-}
-
-#desktop #desktop-p-img img[src*=pg]:hover {
-  opacity: 0;
-  left: 47%;
+  margin-left: -200px;
 }
 
 #desktop #social {
   position: fixed;
-  left: 40px;
-  bottom: 0px;
+  left: 50%;
+  bottom: 50px;
+  width: auto;
+  margin-left: -70px;
 }
 
 #desktop #social a {
-  background: url(../img/desktop-social.png);
   display: block;
   float: left;
   margin-right: 15px;
+  font-size: 40px;
+  opacity: 0.5;
+  color: #108cff;
+  -webkit-transition: opacity 0.3s ease,text-shadow 0.3s ease;
+  transition: opacity 0.3s ease,text-shadow 0.3s ease;
+  border: none;
+  bottom: 10px;
 }
 
-#desktop #social #github,
-#desktop #social #twitter,
-#desktop #social #mail {
-  opacity: 0.3;
-}
-
-#desktop #social #github:hover,
-#desktop #social #twitter:hover,
-#desktop #social #mail:hover {
+#desktop #social a:hover {
   opacity: 0.8;
+  text-shadow: 0 0 10px #108cff;
 }
 
-#desktop #social #github {
-  width: 28px;
-  height: 30px;
+#desktop #social a:last-child {
+  margin-right: 0;
 }
 
-#desktop #social #twitter {
-  width: 36px;
-  height: 30px;
-  background-position: -42px 0px;
+#desktop a {
+  color: #108cff;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+  border-bottom: 1px solid #108cff;
 }
 
-#desktop #social #mail {
-  width: 34px;
-  height: 30px;
-  background-position: -91px 0px;
+#desktop a:hover {
+  border-bottom: 1px solid transparent;
 }
 
 #footer {

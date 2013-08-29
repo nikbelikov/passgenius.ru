@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//initBrowserCheck();		// browser check
+	initBrowserCheck();		// browser check
 	initDayTime();			// dark or light theme
 	initListBtn();			// button lists
 	initMainTabs();			// main tabs
