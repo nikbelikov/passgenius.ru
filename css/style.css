@@ -73,6 +73,10 @@ html.dark body.desktop p {
   color: #fff;
 }
 
+html.dark body.desktop .title {
+  text-shadow: 0 0 10px #fff;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -450,6 +454,12 @@ body.desktop * {
   width: 100%;
   height: 100%;
   text-align: center;
+}
+
+#desktop .title {
+  font: 80px "Bad Script",cursive;
+  color: #fff;
+  padding-top: 50px;
 }
 
 #desktop .container {

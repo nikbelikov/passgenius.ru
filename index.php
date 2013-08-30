@@ -20,6 +20,7 @@
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
