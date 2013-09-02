@@ -27,6 +27,7 @@
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lib/quo.js"></script>
+	<script type="text/javascript" src="js/lib/device.min.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
 </head>
 

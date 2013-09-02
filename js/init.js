@@ -19,7 +19,7 @@ var length = 12;
 var env = $$.environment();	// environment (browser, isMobile ect.)
 
 initBrowserCheck = function(){
-	if ((!env.isMobile) || (env.isMobile && env.os.name !== 'ios')){
+	if (!$('html').hasClass('iphone')){
 		$('.wrapper, #footer').remove();
 		$.ajax('/inc/desktop.php',{
 			success: function(response){
