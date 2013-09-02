@@ -1,6 +1,6 @@
 <div id='desktop'>
 	<div class="container">
-		<div class="title">PassGenus.ru</div>
+		<div class="title">PassGenius.ru</div>
 		<p class="desktop-text">Зайдите на этот сайт с вашего iPhone и добавьте приложение на рабочий стол.</p>
 		<p id='footer'>Разработка: <a href='http://nikbelikov.ru/' target='_blank'>nikbelikov.ru</a>
 		</p>
