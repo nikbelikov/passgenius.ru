@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Imports and Variables
+   ========================================================================== */
+@import "/lib/mixins.less";
+
+@img-folder: "../img"; //path to image folder
+
+/* ==========================================================================
+   Common
+   ========================================================================== */
+html {
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+a {
+	text-decoration: none;
+
+	&.brown {
+		color: #5b320c;
+		border-bottom: 2px solid #784c23;
+	}
+	&.grey {
+		color: #3c4042;
+		border-bottom: 2px solid #3c4042;
+	}
+}
+p {
+	width: 400px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto 35px;
+	line-height: 31px;
+	font-weight: bold;
+}
+.wrapper {
+	width: 640px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+	.content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+#black-box {
+	width: 100%;
+	height: 100%;
+	background: black url('@{img-folder}/preloader.gif') center center no-repeat;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+/* ==========================================================================
+   Transitions
+   ========================================================================== */
+#desktop #desktop-p-img img,
+#github, #twitter, #mail, #presentation,
+#help-link {
+	.transition (all .5s ease);
+}
+
+/* ==========================================================================
+   Disabled tab highLight colors
+   ========================================================================== */
+.btn, .dashed {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-container {
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+	padding: 22px 157px;
+	margin: 0 auto 40px;
+	color: white;
+	.gradient (#54585a, #272a2b, #54585a);
+	border: 2px solid #141414;
+	.border-radius (10px);
+	font-size: 27px;
+	text-shadow:0 -1px 0 #252628;
+	.box-shadow (0 1px 1px rgba(0, 0, 0, 0.3));
+	cursor: pointer;
+
+	&.active {
+		.gradient (#272a2b, #54585a, #272a2b);
+		cursor: default;
+	}
+}
+.list-btn {
+	overflow: hidden;
+	list-style: none;
+	margin-bottom: 35px;
+
+	li {
+		float: left;
+
+		&:first-child span { .border-radius (10px 0 0 10px); }
+		&:last-child span { .border-radius (0 10px 10px 0); }
+		span {
+			width: 200px;
+			padding: 17px 0;
+			margin: 0;
+			margin-left: -2px;
+			position: relative;
+			left: -10px;
+			font-size: 27px;
+			border-radius: 0;
+			text-align: center;
+		}
+	}
+}
+.small-list-btn {
+	li {			
+		span {
+			width: 143px;
+			font-size: 23px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+#header {
+	height: 89px;
+	.gradient (#54585a, #272a2b, #54585a);
+	.box-shadow (0 0 40px rgba(0,0,0,1));
+	position: relative;
+	z-index: 10;
+
+	.list-btn {
+		width: 424px;
+		margin: 0 auto;
+		position: relative;
+		top: 15px;
+	}
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.main-content, .main-about {
+	overflow: hidden;
+	padding-top: 35px;
+}
+.main-content {
+	background: url('@{img-folder}/bg-main.jpg');
+
+	p {
+		color: #5B320C;
+		text-shadow: 0 1px 0 #ECC49C;
+	}
+}
+.main-about {
+	background: url('@{img-folder}/bg-about.png');
+
+	p {
+		color: #3c4042;
+		text-shadow: 0 1px 0 #e3e3e3;
+	}
+}
+#icon {
+	margin-top: 10px;
+}
+.canvas-wrapper {
+	padding-left: 40px;
+	margin-bottom: 40px;
+	position: relative;
+
+	.canvas {
+		width: 560px;
+		height: 368px;
+		background: white;
+		margin: 0 auto;
+		.box-shadow (0 20px 40px rgba(0, 0, 0, 0.3));
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+
+		.password {
+			width: auto;
+			margin: 0;
+			color: #4c4f51;
+			text-shadow: 0 -1px 0 #292929;
+			font-size: 70px;
+			line-height: 86px;
+
+			&.small {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+		#help-link, #help-close {
+			position: absolute;
+			top: 10px;
+			right: 50px;
+			font-size: 26px;
+			font-weight: bold;
+			color: #4c4f51;
+			text-shadow: 0 -1px 0 #292929;
+			padding: 10px;
+			cursor: pointer;
+		}
+		#help-link {
+			opacity: 0.3;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+		#help-close {
+			width: 58px;
+			height: 58px;
+			background: url('../img/help-close.png') center center no-repeat;
+			left: -2px;
+			top: 8px;
+		}
+		#help {
+			position: absolute;
+			top: 16px;
+			display: none;
+			right: -8px;
+		}
+	}
+}
+.social a {
+	margin: 0 10px;
+}
+
+/* ==========================================================================
+   Desktop
+   ========================================================================== */
+body.desktop {
+	background: #58612c url('@{img-folder}/bg-desktop.jpg') center center;
+
+	#footer {
+		height: 50px;
+	}
+}
+#desktop {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	p, a {
+		color: white !important;
+		text-shadow: 0 1px 5px #6D3400;
+		font-size: 14px;
+	}
+	#desktop-p-img {
+		height: 80px;
+		position: relative;
+
+		img {
+			width: 79px;
+			height: 79px;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			margin-left: -40px;
+			z-index: 0;
+
+			&[src*=pg] {
+				z-index: 2;
+
+				&:hover {
+					.opacity (0);
+					left:47%;
+				}
+			}
+		}
+	}
+	#social {
+		position: fixed;
+		left: 40px;
+		bottom: 0px;
+
+		a {
+			background: url('@{img-folder}/desktop-social.png');
+			display: block;
+			float: left;
+			margin-right: 15px;
+		}
+		#github, #twitter, #mail, #presentation {
+			opacity: 0.3;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		#github {
+			width: 28px;
+			height: 30px;
+		}
+		#twitter {
+			width: 36px;
+			height: 30px;
+			background-position: -42px 0px;
+		}
+		#mail {
+			width: 34px;
+			height: 30px;
+			background-position: -91px 0px;
+		}
+		#presentation {
+			width: 36px;
+			height: 30px;
+			background-position: -137px 0px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer {
+	width: 640px;
+	margin: -1px auto 0;
+	height: 1px;
+	position: relative;
+}
