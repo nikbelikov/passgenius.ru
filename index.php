@@ -101,7 +101,7 @@
 </div><!-- .wrapper -->
 
 <div class="last-passwords">
-	<div class="close"></div>
+	<div class="close hidden"></div>
 	<ul></ul>
 </div>
 

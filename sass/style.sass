@@ -303,6 +303,8 @@ sup
 		position: fixed
 		top: 40px
 		right: 14px
+		opacity: 1
+		transition: opacity .2s ease
 
 		&:before, &:after
 			content: ''
@@ -324,6 +326,9 @@ sup
 
 			&:before, &:after
 				background: $blue
+
+		&.hidden
+			opacity: 0
 
 	ul
 		$width: 500px

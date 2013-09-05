@@ -355,6 +355,9 @@ sup {
   position: fixed;
   top: 40px;
   right: 14px;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .last-passwords .close:before,
@@ -386,6 +389,10 @@ sup {
 .last-passwords .close:active:before,
 .last-passwords .close:active:after {
   background: #108cff;
+}
+
+.last-passwords .close.hidden {
+  opacity: 0;
 }
 
 .last-passwords ul {

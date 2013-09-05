@@ -117,6 +117,7 @@ initGeneratePass = function(){
 
 function closeLastPass(){
 	$('.last-passwords').removeClass('bounceIn').addClass('bounceOut');
+	$('.close').toggleClass('hidden');
 	setTimeout(function(){
 		$('.last-passwords').removeClass('visible');
 		$('.wrapper').toggleClass('blur');
@@ -128,6 +129,7 @@ initLastPasswords = function(){
 		if (!$('.icon-list-ul').hasClass('disabled')) {
 			$('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
 			$('.wrapper').toggleClass('blur');
+			$('.close').toggleClass('hidden');
 		}
 	});
 
