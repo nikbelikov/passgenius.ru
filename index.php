@@ -29,6 +29,9 @@
 <div class="wrapper">
 
     <header id="header">
+        <img width="104" height="104" src="img/svg/lock.svg" alt="logo">
+        PassGenius
+
         <ul class="list-btn">
             <li><span class="btn active">Пароль</span>
             <li><span class="btn">О проекте</span>
@@ -138,6 +141,8 @@
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>
 </html>

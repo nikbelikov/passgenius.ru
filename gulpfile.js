@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     csso = require('gulp-csso');
 
 var paths = {
-    css: ['css/*.css'],
     sass: ['sass/**/*.sass']
 };
 
@@ -20,9 +19,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.sass, function(){
-        gulp.run('sass');
-    });
+    gulp.watch(paths.sass, ['sass']);
+
+    // gulp.watch(paths.sass, function(){
+    //     gulp.run('sass');
+    // });
 });
 
-//gulp.task('default', ['compass', 'autoprefixer', 'watch']);
+gulp.task('default', ['sass']);

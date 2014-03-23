@@ -1,0 +1,162 @@
+/* Common */
+*
+    user-select: none
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+html
+    height: 100%
+    background: url(../img/bg.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+body
+    width: 100%
+    height: 100%
+    margin: 0
+    font-family: "Helvetica Neue", sans-serif
+    font-weight: 300
+    color: $main-color
+    font-size: 14px
+    line-height: 20px
+
+a
+    text-decoration: none
+
+p
+    width: 400px
+    font-size: 25px
+    text-align: center
+    margin: 0 auto 35px
+    line-height: 31px
+
+sup
+    font-size: 10px
+
+.wrapper
+    width: 640px
+    margin: 0 auto
+    min-height: 100%
+    height: auto !important
+    height: 100%
+    transition: opacity .5s ease
+
+    &.blur
+        opacity: 0
+
+    .content
+        position: relative
+        top: -20px
+        height: 0
+        opacity: 0
+        padding: 0
+        transition: all .5s ease
+
+        &.active
+            top: 0
+            opacity: 1
+            height: auto
+
+#black-box
+    width: 100%
+    height: 100%
+    background: white
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+
+    .icon-spin
+        //color: $blue
+        font-size: 80px
+        position: absolute
+        left: 50%
+        top: 50%
+        margin: -41px 0 0 -25px
+
+/* Header */
+#header
+    margin: 10px 0 20px
+    font-size: 40px
+    font-weight: normal
+
+
+
+/* Content */
+.main-content, .main-about
+    overflow: hidden
+    padding-top: 35px
+
+.main-content p
+    //color: $blue
+
+.main-about p
+    color: $main-color
+
+#icon
+    margin-top: 10px
+
+.canvas-wrapper
+    padding-left: 40px
+    margin-bottom: 40px
+    position: relative
+
+    .canvas
+        width: 560px
+        height: 368px
+        margin: 0 auto
+        text-align: center
+        display: table-cell
+        vertical-align: middle
+
+        img
+            width: 70%
+            height: auto
+            border-radius: 50%
+
+        .password
+            width: auto
+            margin: 0
+            color: $main-color
+            font-size: 70px
+            line-height: 86px
+
+            &.small
+                font-size: 40px
+                line-height: 50px
+
+            &.selectable
+                user-select: initial
+
+.icon-list-ul
+    font-size: 30px
+    //color: $gray
+    position: relative
+    left: 20px
+    top: 3px
+    padding: 20px
+    margin-left: -20px
+    transition: opacity .5s ease
+
+    &:active
+        //color: $blue
+        //text-shadow: 0 0 10px $blue
+
+    &.disabled
+        opacity: 0.5
+
+.social a
+    margin: 0 10px
+    font-size: 78px
+    //color: $gray
+
+    &:active
+        //color: $blue
+        //text-shadow: 0 0 10px $blue
+
+/* Footer */
+#footer
+    width: 640px
+    margin: -1px auto 0
+    height: 1px
+    position: relative

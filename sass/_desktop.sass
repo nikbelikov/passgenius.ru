@@ -1,0 +1,74 @@
+body.desktop
+    background: url(/img/bg-white.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+    //color: $gray
+
+    #footer
+        width: 100%
+        height: 50px
+        position: absolute
+        bottom: 22px
+
+    *
+        user-select: initial
+
+#desktop
+    width: 100%
+    height: 100%
+    text-align: center
+
+    .title
+        font: 80px "Bad Script", cursive
+        color: white
+        padding-top: 50px
+
+    .container
+        position: relative
+        z-index: 1
+        height: 100%
+
+    p
+        font-size: 15px
+
+    .desktop-text
+        font-size: 15px
+        position: absolute
+        bottom: 130px
+        left: 50%
+        margin-left: -200px
+
+    #social
+        position: fixed
+        left: 50%
+        bottom: 50px
+        width: auto
+        margin-left: -70px
+
+        a
+            display: block
+            float: left
+            margin-right: 15px
+            font-size: 40px
+            opacity: 0.5
+            //color: $blue
+            transition: opacity .3s ease, text-shadow .3s ease
+            border: none
+            bottom: 10px
+
+            &:hover
+                opacity: 0.8
+                //text-shadow: 0 0 10px $blue
+
+            &:last-child
+                margin-right: 0
+
+    a
+        //color: $blue
+        transition: border .3s ease
+        //border-bottom: 1px solid $blue
+
+        &:hover
+            border-bottom: 1px solid transparent
