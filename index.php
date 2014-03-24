@@ -9,7 +9,7 @@
     <noscript><meta http-equiv="refresh" content="0;url=nojs.php"/></noscript>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="PassGenius" />
 
     <link rel="apple-touch-startup-image" href="startup-image.png" />
@@ -24,7 +24,7 @@
 
 <body>
 
-<div id="black-box" class="vis"></div>
+<div id="fade-box" class="vis"></div>
 
 <div class="wrapper">
 
@@ -40,46 +40,46 @@
 
     <section class="content main-content active">
 
+        <img class="last-passwords-icon hidden-hard" width="28" src="img/svg/list.svg" alt="last-passwords">
+
         <div class="canvas-wrapper">
             <div class="canvas">
                 <p class="password small">Нажмите на "Создать"</p>
             </div>
         </div>
 
-        <div id="generate-btn" class="btn-container"><span class="btn">Создать</span></div>
+        <div id="generate-btn" class="btn-container">
+            <span class="btn">Создать</span>
+            <img class="settings-icon" class="logo" width="24" src="img/svg/settings.svg" alt="logo">
+        </div>
 
         <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
         <p>Специально для iPhone.<br>
         Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
         <p><?php echo date('Y'); ?> (с)<br>
         PassGenius.ru</p>
+
     </section> <!-- .main-content -->
 
     <section class="content main-about">
 
-        <p>Проект PassGenius создавался для тех, кто дорожит своими аккаунтами в сети Интернет и использует правильные пароли.</p>
-
-        <div class="canvas-wrapper">
-            <div class="canvas">
-                <img src="img/image.jpg" alt="image">
-            </div>
-        </div>
-
         <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a class="blue" href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
+
         <p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
         <p>Ранние версии:<br>
-            <a class="blue" href="http://passgenius.ru/v1.0/" target="_blank">v1.0</a>,
-            <a class="blue" href="http://passgenius.ru/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="http://passgenius.ru/v2.0/presentation" target="_blank">презентация</a>
+            <a href="http://passgenius.ru/v1.0/" target="_blank">v1.0</a>,
+            <a href="http://passgenius.ru/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="http://passgenius.ru/v2.0/presentation" target="_blank">презентация</a>,
+            <a href="http://passgenius.ru/v3.0/" target="_blank">v3.0</a>
         </p>
 
         <p>Специально для iPhone.<br>
         Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
         <p class="social">
-            <a class="icon-github" href="https://github.com/nikbelikov/passgenius.ru" target="_blank"></a>
-            <a class="icon-twitter" href="https://twitter.com/_nikbelikov" target="_blank"></a>
-            <a class="icon-envelope-alt" href="mailto:nikbelikov@me.com"></a>
+            <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="/img/svg/github.svg" alt="github"></a>
+            <a href="https://twitter.com/_nikbelikov" target="_blank"><img width="60" src="/img/svg/twitter.svg" alt="github"></a>
+            <a href="mailto:nikbelikov@me.com"><img width="80" src="/img/svg/mail.svg" alt="github"></a>
         </p>
 
         <p><?php echo date('Y'); ?> (с)<br>

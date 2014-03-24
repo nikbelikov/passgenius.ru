@@ -12,10 +12,6 @@
     font-size: 27px
     transition: background .5s ease, color .5s ease, text-shadow .5s ease
 
-    &:active
-        //background: $blue
-        //color: $white
-
     &:active, &.active
         background: $bg-active
         color: $secondary-color
@@ -33,8 +29,10 @@
 
         &:first-child span
             border-radius: $radius 0 0 $radius
+
         &:last-child span
             border-radius: 0 $radius $radius 0
+
         span
             width: 225px
             padding: 21px 0
@@ -45,3 +43,26 @@
             border: none
             border-radius: 0
             text-align: center
+
+#generate-btn
+    .btn
+        position: relative
+        background: rgba(255,255,255,0.1)
+        margin-bottom: 75px
+
+        &:active
+            background: rgba(255,255,255,0.8)
+
+            + .settings-icon
+                opacity: 0
+
+    .settings-icon
+        position: absolute
+        padding: 27px
+        right: 95px
+        z-index: 10
+        border-radius: 0 $radius $radius 0
+        transition: background .1s ease
+
+        &:active, &.active
+            background: rgba(255,255,255,0.2)

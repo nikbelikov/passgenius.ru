@@ -4,11 +4,12 @@ $(document).ready(function(){
     initMainTabs();         // main tabs
     initInnerElements();    // inner hidden text (with ios background)
     initGeneratePass();     // generate password
+    initSettings();         // password settings
     initLastPasswords();    // last passwords popup
 });
 
 $(window).load(function(){
-    $('#black-box').fadeOut();
+    $('#fade-box').fadeOut();
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
@@ -16,7 +17,7 @@ var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
 
 var env = $$.environment(); // environment (browser, isMobile ect.)
 
-initBrowserCheck = function(){
+var initBrowserCheck = function(){
     if (!$('html').hasClass('iphone')){
         $('.wrapper, #footer').remove();
         $.ajax('/inc/desktop.php',{
@@ -31,14 +32,14 @@ initBrowserCheck = function(){
     }
 };
 
-initListBtn = function(){
+var initListBtn = function(){
     $$('.list-btn .btn').tap(function(){
         $(this).parent().parent().find('.btn').removeClass('active');
         $(this).addClass('active');
     });
 };
 
-initMainTabs = function(){
+var initMainTabs = function(){
     $$('header .list-btn li').tap(function(){
         var ind = $(this).index();
         var $content = $('.wrapper .content');
@@ -46,7 +47,7 @@ initMainTabs = function(){
     });
 };
 
-initInnerElements = function(){
+var initInnerElements = function(){
     $$('.dashed').tap(function(){
         $(this).parent().next('.inner').slideToggle();
     });
@@ -65,17 +66,21 @@ function GeneratePass(chars,length){
     res = res.replace(">","&gt;");
     res = res.replace("<","&lt;");
     return res;
-}
+};
 
-initGeneratePass = function(){
+var initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
+        // сложность пароля
         var compl = $('#compl').find('.btn.active').parent().index();
         if (compl === 0) { $('.password').addClass('small'); }
         else { $('.password').removeClass('small'); }
+
+        // генерируем пароль
         $('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
 
         // добавляем последние пароли в popup
-        if($('.last-passwords li').length != 5) {
+        var last_passwords = 6;
+        if($('.last-passwords li').length != last_passwords) {
             $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
         }
         else {
@@ -83,7 +88,12 @@ initGeneratePass = function(){
             $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
         }
 
-        //$('.icon-list-ul').removeClass('disabled');
+        // если сгенерировано больше одного пароля
+        if ($('.last-passwords li').length > 1) {
+            $('.last-passwords-icon').removeClass('hidden-hard');
+        }
+
+        hideSettings();
     });
 };
 
@@ -94,15 +104,36 @@ function closeLastPass(){
         $('.last-passwords').removeClass('visible');
         $('.wrapper').toggleClass('blur');
     },500);
-}
+};
 
-initLastPasswords = function(){
-    $$('#last-passwords').tap(function(){
-        if (!$('.icon-list-ul').hasClass('disabled')) {
-            $('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
-            $('.wrapper').toggleClass('blur');
-            $('.close').toggleClass('hidden');
+function showSettings(){
+    $('.settings-icon').addClass('active');
+    $('.canvas, .last-passwords-icon').addClass('hidden');
+};
+
+function hideSettings(){
+    $('.settings-icon').removeClass('active');
+    $('.canvas, .last-passwords-icon').removeClass('hidden');
+};
+
+var initSettings = function(){
+    $$('.settings-icon').tap(function(){
+        // показываем настройки
+        if (!$(this).hasClass('active')) {
+            showSettings();
         }
+        // скрываем настройки
+        else {
+            hideSettings();
+        }
+    });
+};
+
+var initLastPasswords = function(){
+    $$('.last-passwords-icon').tap(function(){
+        $('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
+        $('.wrapper').toggleClass('blur');
+        $('.close').toggleClass('hidden');
     });
 
     $$('.last-passwords ul li').tap(function(){
