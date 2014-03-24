@@ -3,7 +3,6 @@ $(document).ready(function(){
     initListBtn();          // button lists
     initMainTabs();         // main tabs
     initInnerElements();    // inner hidden text (with ios background)
-    initChangeType();       // change type of password
     initGeneratePass();     // generate password
     initLastPasswords();    // last passwords popup
 });
@@ -12,8 +11,8 @@ $(window).load(function(){
     $('#black-box').fadeOut();
 });
 
-var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-var length = 12;
+var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+    length = 12;
 
 var env = $$.environment(); // environment (browser, isMobile ect.)
 
@@ -32,14 +31,6 @@ initBrowserCheck = function(){
     }
 };
 
-initDayTime = function(){
-    var hour = new Date();
-    hour = hour.getHours();
-    if(hour >= 19 || hour <= 7 ) {
-        $('html').addClass('dark');
-    }
-};
-
 initListBtn = function(){
     $$('.list-btn .btn').tap(function(){
         $(this).parent().parent().find('.btn').removeClass('active');
@@ -48,7 +39,7 @@ initListBtn = function(){
 };
 
 initMainTabs = function(){
-    $$('#header .list-btn li').tap(function(){
+    $$('header .list-btn li').tap(function(){
         var ind = $(this).index();
         var $content = $('.wrapper .content');
         $content.removeClass('active').eq(ind).addClass('active');
@@ -58,24 +49,6 @@ initMainTabs = function(){
 initInnerElements = function(){
     $$('.dashed').tap(function(){
         $(this).parent().next('.inner').slideToggle();
-    });
-};
-
-initChangeType = function(){
-    $$('#hard').tap(function(){
-        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!";%:?*()_+=-~/<>,.[]{}';
-        length = 21;
-    });
-    $$('#web, #simple').tap(function(){
-        chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-        length = 12;
-    });
-    $$('#simple').tap(function(){
-        length = 8;
-    });
-    $$('#pin').tap(function(){
-        chars = '1234567890';
-        length = 4;
     });
 };
 
@@ -110,7 +83,7 @@ initGeneratePass = function(){
             $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
         }
 
-        $('.icon-list-ul').removeClass('disabled');
+        //$('.icon-list-ul').removeClass('disabled');
     });
 };
 

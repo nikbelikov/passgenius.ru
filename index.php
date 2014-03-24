@@ -28,9 +28,9 @@
 
 <div class="wrapper">
 
-    <header id="header">
-        <img width="104" height="104" src="img/svg/lock.svg" alt="logo">
-        PassGenius
+    <header>
+        <img class="logo" width="52" height="52" src="img/svg/lock.svg" alt="logo">
+        <span class="name">PassGenius</span>
 
         <ul class="list-btn">
             <li><span class="btn active">Пароль</span>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i id="last-passwords" class="icon-list-ul disabled"></i></div>
+        <div id="generate-btn" class="btn-container"><span class="btn">Создать</span></div>
 
         <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
         <p>Специально для iPhone.<br>
