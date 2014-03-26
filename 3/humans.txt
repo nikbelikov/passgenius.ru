@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Belikov Nikolay -- Design and Development -- @_nikbelikov, nikbelikov@me.com
+
+# THANKS
+    to my Muse and Elvis Presley's songs
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    Sass, Compass, Autoprefixer
+    jQuery, QUOjs
+    Font Awesome and Google Web Fonts
+
+# USED
+    HP Pavilion Laptop, Linux Ubuntu, Git, GitFlow, Google Chrome Web Browser, Sublime Text and ST Extensions, Gimp, iPhone 4

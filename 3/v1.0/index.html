@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Веб-генератор паролей для iPhone</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Веб-генератор паролей для iPhone">
+		<meta name="keywords" content="генератор, пароль, iphone, web">
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+      
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+      
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/password.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+          <div id="logo"><img src="img/logo.png" width="115" height="49" alt="Логотип" /></div>
+			 <form name="f" method="POST" action="index.html">
+				<table id="symbols_and_length">
+					<tr>
+						<td id="symbols">
+							Символы:<br>
+							<input id="symbols_length" class="inputs" type="text" name="chars" value="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz">
+						</td>
+						<td id="length">
+							Длина:<br>
+							<input id="input_length" class="inputs" type="text" name="length" value="10" maxlength="2">
+						</td>
+					</tr>
+				</table>
+				<div id="variants">
+					Варианты:<br>
+					<input type="checkbox" name="check1" id="check1" onclick="Check();" checked><label for="check1">Маленькие буквы (abcdefgh...)</label><br>
+					<input type="checkbox" name="check2" id="check2" onclick="Check();" checked><label for="check2">Большие буквы (ABCDEFGH...)</label><br>
+					<input type="checkbox" name="check3" id="check3" onclick="Check();" checked><label for="check3">Цифры (12345...)</label><br>
+					<input type="checkbox" name="check4" id="check4" onclick="Check();"><label for="check4">Знаки (!”№;%:?...)</label>
+				</div>
+				<div><a id="create_pass" class="black button" href="#" onclick="document.all.pass.value = PasGenHTML(f.chars.value, f.length.value);">Создать!</a></div>
+				<div id="password" style="display: none;">
+					Пароль:<br>
+					<input id="pass_length" class="inputs" type="text" name="pass" value="">
+				</div>
+         </form>
+			<div id="copyright">2011 (с) Дизайн и разработка by Николай Беликов</div>
+		</div>
+	</body>
+</html>
