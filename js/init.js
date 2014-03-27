@@ -2,7 +2,6 @@ $(document).ready(function(){
     //initBrowserCheck();   // browser check
     initListBtn();          // button lists
     initMainTabs();         // main tabs
-    initInnerElements();    // inner hidden text (with ios background)
     initGeneratePass();     // generate password
     initSettings();         // password settings
     initLastPasswords();    // last passwords popup
@@ -10,6 +9,7 @@ $(document).ready(function(){
 
 $(window).load(function(){
     $('#fade-box').fadeOut();
+    window.scrollTo(0, 0);
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
@@ -44,12 +44,6 @@ var initMainTabs = function(){
         var ind = $(this).index();
         var $content = $('.wrapper .content');
         $content.removeClass('active').eq(ind).addClass('active');
-    });
-};
-
-var initInnerElements = function(){
-    $$('.dashed').tap(function(){
-        $(this).parent().next('.inner').slideToggle();
     });
 };
 

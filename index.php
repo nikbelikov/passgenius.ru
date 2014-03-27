@@ -68,8 +68,8 @@
         <p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
         <p>Ранние версии:<br>
-            <a href="v1.0/" target="_blank">v1.0</a>,
-            <a href="/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="/v2.0/presentation" target="_blank">презентация</a>,
+            <a href="/1" target="_blank">v1.0</a>,
+            <a href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>,
             <a href="/3" target="_blank">v3.0</a>
         </p>
 

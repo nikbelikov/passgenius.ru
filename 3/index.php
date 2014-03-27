@@ -81,8 +81,8 @@
 		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
 		<p>Ранние версии:<br>
-			<a class="blue" href="http://passgenius.ru/v1.0/" target="_blank">v1.0</a>,
-			<a class="blue" href="http://passgenius.ru/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="http://passgenius.ru/v2.0/presentation" target="_blank">презентация</a>
+			<a class="blue" href="/1" target="_blank">v1.0</a>,
+			<a class="blue" href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>
 		</p>
 
 		<p>Специально для iPhone.<br>
@@ -94,7 +94,7 @@
 			<a class="icon-envelope-alt" href="mailto:nikbelikov@me.com"></a>
 		</p>
 
-		<p><?php echo date('Y'); ?> (с)<br>
+		<p>2013 (с)<br>
 		PassGenius.ru<sup>v3.0</sup></p>
 	</div> <!-- .main-about -->
 
@@ -106,48 +106,6 @@
 </div>
 
 <footer id="footer"></footer>
-
-<!-- Google Analitycs counter -->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39701630-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-<!-- /Google Analitycs counter -->
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter20781985 = new Ya.Metrika({id:20781985,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true});
-        } catch(e) { }
-    });
-
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 
 </body>
 </html>
