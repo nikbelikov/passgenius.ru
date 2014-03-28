@@ -64,7 +64,7 @@
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
 		Разработка: <a class="brown" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-		<p><?php echo date('Y'); ?> (с)<br>
+		<p>2012 (с)<br>
 		PassGenius.ru</p>
 	</div> <!-- .main-content -->
 
