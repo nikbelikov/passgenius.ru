@@ -84,6 +84,7 @@
 
         <p><?php echo date('Y'); ?> (с)<br>
         PassGenius.ru<sup>v4</sup></p>
+
     </section> <!-- .main-about -->
 
 </div><!-- .wrapper -->
