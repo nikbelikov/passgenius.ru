@@ -50,6 +50,7 @@
                         длина
                         <span class="number">12</span>
                     </div>
+                    <div class="length-slider"></div>
                     <ul class="list-btn">
                         <li><span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
                         <li><span class="btn active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
@@ -108,6 +109,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/lib/quo.js"></script>
 <script src="js/lib/device.min.js"></script>
+<script src="js/lib/jquery.nouislider.min.js"></script>
 <script src="js/init.js"></script>
 
 <!-- Google Analitycs counter -->

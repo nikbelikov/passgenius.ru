@@ -115,6 +115,27 @@ var initSettings = function(){
     $$('.settings .btn').tap(function(){
         $(this).toggleClass('active');
     });
+
+    // слайдер с выбором длины пароля
+    var Link = $.noUiSlider.Link;
+    $(".length-slider").noUiSlider({
+        start: 12,
+        range: {
+            'min': 4,
+            'max': 30
+        },
+        serialization: {
+            lower: [
+                new Link({
+                    // отображаем длину пароля
+                    target: $('.length .number')
+                })
+            ],
+            format: {
+                decimals: 0
+            }
+        }
+    });
 };
 
 function closeLastPass(){
