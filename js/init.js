@@ -1,6 +1,5 @@
 $(document).ready(function(){
     //initBrowserCheck();   // browser check
-    initListBtn();          // button lists
     initMainTabs();         // main tabs
     initGeneratePass();     // generate password
     initSettings();         // password settings
@@ -17,7 +16,7 @@ var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
 
 var env = $$.environment(); // environment (browser, isMobile ect.)
 
-var initBrowserCheck = function(){
+initBrowserCheck = function(){
     if (!$('html').hasClass('iphone')){
         $('.wrapper, #footer').remove();
         $.ajax('/inc/desktop.php',{
@@ -32,18 +31,14 @@ var initBrowserCheck = function(){
     }
 };
 
-var initListBtn = function(){
-    $$('.list-btn .btn').tap(function(){
-        $(this).parent().parent().find('.btn').removeClass('active');
-        $(this).addClass('active');
-    });
-};
-
-var initMainTabs = function(){
+initMainTabs = function(){
     $$('header .list-btn li').tap(function(){
         var ind = $(this).index();
         var $content = $('.wrapper .content');
         $content.removeClass('active').eq(ind).addClass('active');
+
+        $(this).parent().find('.btn').removeClass('active');
+        $(this).find('.btn').addClass('active');
     });
 };
 
@@ -62,7 +57,7 @@ function GeneratePass(chars,length){
     return res;
 };
 
-var initGeneratePass = function(){
+initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
         // сложность пароля
         var compl = $('#compl').find('.btn.active').parent().index();
@@ -70,7 +65,7 @@ var initGeneratePass = function(){
         else { $('.password').removeClass('small'); }
 
         // генерируем пароль
-        $('.password').addClass('selectable').html(GeneratePass(chars, length)).hide().fadeIn();
+        $('.password').addClass('selectable').html(GeneratePass(chars, length))//.hide().fadeIn();
 
         // добавляем последние пароли в popup
         var last_passwords = 6;
@@ -82,7 +77,8 @@ var initGeneratePass = function(){
             $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
         }
 
-        // если сгенерировано больше одного пароля
+        // если сгенерировано больше одного пароля,
+        // показываем иконку списка последних паролей
         if ($('.last-passwords li').length > 1) {
             $('.last-passwords-icon').removeClass('hidden-hard');
         }
@@ -91,23 +87,17 @@ var initGeneratePass = function(){
     });
 };
 
-function closeLastPass(){
-    $('.last-passwords').removeClass('bounceIn').addClass('bounceOut');
-    $('.close').toggleClass('hidden');
-    setTimeout(function(){
-        $('.last-passwords').removeClass('visible');
-        $('.wrapper').toggleClass('blur');
-    },500);
-};
-
 function showSettings(){
+    $('.password, .last-passwords-icon').addClass('hidden').removeClass('selectable');
     $('.settings-icon').addClass('active');
-    $('.canvas, .last-passwords-icon').addClass('hidden');
+    $('.settings').removeClass('flipOutX').addClass('animated flipInX');
 };
 
 function hideSettings(){
+    $('.password, .last-passwords-icon').removeClass('hidden');
+    $('.password').addClass('selectable');
     $('.settings-icon').removeClass('active');
-    $('.canvas, .last-passwords-icon').removeClass('hidden');
+    $('.settings').removeClass('flipInX').addClass('flipOutX');
 };
 
 var initSettings = function(){
@@ -121,9 +111,22 @@ var initSettings = function(){
             hideSettings();
         }
     });
+
+    $$('.settings .btn').tap(function(){
+        $(this).toggleClass('active');
+    });
 };
 
-var initLastPasswords = function(){
+function closeLastPass(){
+    $('.last-passwords').removeClass('bounceIn').addClass('bounceOut');
+    $('.close').toggleClass('hidden');
+    setTimeout(function(){
+        $('.last-passwords').removeClass('visible');
+        $('.wrapper').toggleClass('blur');
+    },500);
+};
+
+initLastPasswords = function(){
     $$('.last-passwords-icon').tap(function(){
         $('.last-passwords').removeClass('bounceOut').addClass('visible animated bounceIn');
         $('.wrapper').toggleClass('blur');

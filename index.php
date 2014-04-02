@@ -45,12 +45,23 @@
         <div class="canvas-wrapper">
             <div class="canvas">
                 <p class="password small">Нажмите на "Создать"</p>
+                <div class="settings">
+                    <div class="length">
+                        длина
+                        <span class="number">12</span>
+                    </div>
+                    <ul class="list-btn">
+                        <li><span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
+                        <li><span class="btn active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
+                    </ul>
+                    <span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">без повторения знаков</span>
+                </div>
             </div>
         </div>
 
         <div id="generate-btn" class="btn-container">
             <span class="btn">Создать</span>
-            <img class="settings-icon" class="logo" width="24" src="img/svg/settings.svg" alt="logo">
+            <img class="settings-icon" width="24" src="img/svg/settings.svg" alt="logo">
         </div>
 
         <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
