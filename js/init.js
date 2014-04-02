@@ -59,13 +59,10 @@ function GeneratePass(chars,length){
 
 initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
-        // сложность пароля
-        var compl = $('#compl').find('.btn.active').parent().index();
-        if (compl === 0) { $('.password').addClass('small'); }
-        else { $('.password').removeClass('small'); }
-
         // генерируем пароль
-        $('.password').addClass('selectable').html(GeneratePass(chars, length))//.hide().fadeIn();
+        $('.password').addClass('selectable')
+            .removeClass('small')
+            .html(GeneratePass(chars, length))//.hide().fadeIn();
 
         // добавляем последние пароли в popup
         var last_passwords = 6;
