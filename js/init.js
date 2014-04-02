@@ -118,12 +118,21 @@ var initSettings = function(){
         }
     });
 
+    // меняем настройки пароля (символы, цифры, без повторения знаков)
     $$('.settings .btn').tap(function(){
         $(this).toggleClass('active');
 
-        if ($(this).hasClass('active')){
-            console.log('123');
-        }
+        chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        $('.settings .btn').each(function(){
+            if ($(this).hasClass('active')){
+                if ($(this).hasClass('settings-symbols')){
+                    chars += '!";%:?*()_+=-~/<>,.[]{}';
+                }
+                if ($(this).hasClass('settings-numbers')){
+                    chars += '1234567890';
+                }
+            }
+        });
     });
 
     // слайдер с выбором длины пароля

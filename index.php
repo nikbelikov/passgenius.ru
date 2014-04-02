@@ -52,8 +52,8 @@
                     </div>
                     <div class="length-slider"></div>
                     <ul class="list-btn">
-                        <li><span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
-                        <li><span class="btn active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
+                        <li><span class="btn settings-symbols"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
+                        <li><span class="btn settings-numbers active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
                     </ul>
                     <span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">без повторения знаков</span>
                 </div>
