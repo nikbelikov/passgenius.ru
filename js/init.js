@@ -12,7 +12,7 @@ $(window).load(function(){
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-    length = 12;
+    length = 10;
 
 var env = $$.environment(); // environment (browser, isMobile ect.)
 
@@ -55,7 +55,7 @@ function GeneratePass(chars,length){
     res = res.replace(">","&gt;");
     res = res.replace("<","&lt;");
     return res;
-};
+}
 
 initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
@@ -91,14 +91,23 @@ function showSettings(){
     $('.password, .last-passwords-icon').addClass('hidden').removeClass('selectable');
     $('.settings-icon').addClass('active');
     $('.settings').removeClass('flipOutX').addClass('animated flipInX');
-};
+}
 
 function hideSettings(){
     $('.password, .last-passwords-icon').removeClass('hidden');
     $('.password').addClass('selectable');
     $('.settings-icon').removeClass('active');
     $('.settings').removeClass('flipInX').addClass('flipOutX');
-};
+}
+
+// установить
+function setPasswordLength(value, handle, slider){
+    // меняем подпись (длина пароля)
+    $(this).text(value);
+    // меняем глобальную переменную, которая используется
+    // при генерации пароля
+    length = value;
+}
 
 var initSettings = function(){
     $$('.settings-icon').tap(function(){
@@ -114,21 +123,26 @@ var initSettings = function(){
 
     $$('.settings .btn').tap(function(){
         $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')){
+            console.log('123');
+        }
     });
 
     // слайдер с выбором длины пароля
     var Link = $.noUiSlider.Link;
     $(".length-slider").noUiSlider({
-        start: 12,
+        start: length,
         range: {
-            'min': 4,
+            'min': 6,
             'max': 30
         },
         serialization: {
             lower: [
                 new Link({
                     // отображаем длину пароля
-                    target: $('.length .number')
+                    target: $('.length .number'),
+                    method: setPasswordLength
                 })
             ],
             format: {
@@ -145,7 +159,7 @@ function closeLastPass(){
         $('.last-passwords').removeClass('visible');
         $('.wrapper').toggleClass('blur');
     },500);
-};
+}
 
 initLastPasswords = function(){
     $$('.last-passwords-icon').tap(function(){
