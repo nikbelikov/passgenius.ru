@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //initBrowserCheck();   // browser check
+    //initBrowserCheck();     // browser check
     initMainTabs();         // main tabs
     initGeneratePass();     // generate password
     initSettings();         // password settings
