@@ -12,7 +12,8 @@ $(window).load(function(){
 });
 
 var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-    length = 10;
+    length = 10,
+    no_repeat = false;
 
 var env = $$.environment(); // environment (browser, isMobile ect.)
 
@@ -43,13 +44,16 @@ initMainTabs = function(){
 };
 
 // function generates password
-function GeneratePass(chars,length){
+function GeneratePass(chars, length, no_repeat){
     var res = '';
     var r;
     var i;
     for (i = 1; i <= length; i++) {
         r = Math.floor(Math.random() * chars.length);
         res = res + chars.substring(r,r+1);
+        if (no_repeat){
+            chars = chars.replace(chars.substring(r,r+1), '');
+        }
     }
     res = res.replace("&","&amp;");
     res = res.replace(">","&gt;");
@@ -62,7 +66,7 @@ initGeneratePass = function(){
         // генерируем пароль
         $('.password').addClass('selectable')
             .removeClass('small')
-            .html(GeneratePass(chars, length))//.hide().fadeIn();
+            .html(GeneratePass(chars, length, no_repeat))//.hide().fadeIn();
 
         // добавляем последние пароли в popup
         var last_passwords = 6;
@@ -123,6 +127,7 @@ var initSettings = function(){
         $(this).toggleClass('active');
 
         chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        no_repeat = false;
         $('.settings .btn').each(function(){
             if ($(this).hasClass('active')){
                 if ($(this).hasClass('settings-symbols')){
@@ -130,6 +135,9 @@ var initSettings = function(){
                 }
                 if ($(this).hasClass('settings-numbers')){
                     chars += '1234567890';
+                }
+                if ($(this).hasClass('settings-no-repeat')){
+                    no_repeat = true;
                 }
             }
         });

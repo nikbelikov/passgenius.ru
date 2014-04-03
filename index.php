@@ -55,7 +55,7 @@
                         <li><span class="btn settings-symbols"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
                         <li><span class="btn settings-numbers active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
                     </ul>
-                    <span class="btn"><img class="check" width="24" src="img/svg/check.svg" alt="check">без повторения знаков</span>
+                    <span class="btn settings-no-repeat"><img class="check" width="24" src="img/svg/check.svg" alt="check">без повторения знаков</span>
                 </div>
             </div>
         </div>
