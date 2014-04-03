@@ -13,4 +13,4 @@
     jQuery, QUOjs, devicejs, noui slider
 
 # USED
-    Mavericks, WebStorm, Photoshop CC, Tower for Git, Google Chrome Web Browser
+    Mavericks, WebStorm 8, Photoshop CC, Tower for Git, Google Chrome Web Browser
