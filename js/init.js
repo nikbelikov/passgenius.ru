@@ -64,9 +64,16 @@ function GeneratePass(chars, length, no_repeat){
 initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
         // генерируем пароль
+        var change_pass_animation = 'flipInX';
+
         $('.password').addClass('selectable')
             .removeClass('small')
-            .html(GeneratePass(chars, length, no_repeat))//.hide().fadeIn();
+            .html(GeneratePass(chars, length, no_repeat))
+            .addClass(change_pass_animation);
+
+        setTimeout(function(){
+            $('.password').removeClass(change_pass_animation);
+        },500);
 
         // добавляем последние пароли в popup
         var last_passwords = 6;

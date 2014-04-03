@@ -44,7 +44,7 @@
 
         <div class="canvas-wrapper">
             <div class="canvas">
-                <p class="password small">Нажмите на "Создать"</p>
+                <p class="password animated small">Нажмите на "Создать"</p>
                 <div class="settings">
                     <div class="length">
                         длина

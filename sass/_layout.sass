@@ -104,16 +104,13 @@ header
             color: $main-color
             font-size: 60px
             line-height: 86px
-            text-shadow: 0 0 50px $secondary-color
             position: relative
-            left: 0
-            transition: opacity .2s ease .5s, left .2s ease .5s
+            transition: opacity .2s ease
 
             &.hidden
                 opacity: 0
-                left: -20px
                 z-index: -1
-                transition: opacity .2s ease, left .2s ease
+                //transition: opacity .2s ease, left .2s ease
 
             &.small
                 font-size: 40px
