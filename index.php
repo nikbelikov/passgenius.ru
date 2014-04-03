@@ -40,7 +40,7 @@
 
     <section class="content main-content active">
 
-        <img class="last-passwords-icon hidden-hard" width="28" src="img/svg/list.svg" alt="last-passwords">
+        <img class="last-passwords-icon hidden-hard" width="35" src="img/svg/list.svg" alt="last-passwords">
 
         <div class="canvas-wrapper">
             <div class="canvas">
@@ -52,20 +52,19 @@
                     </div>
                     <div class="length-slider"></div>
                     <ul class="list-btn">
-                        <li><span class="btn settings-symbols"><img class="check" width="24" src="/img/svg/check.svg" alt="check">символы</span>
-                        <li><span class="btn settings-numbers active"><img class="check" width="24" src="/img/svg/check.svg" alt="check">цифры</span>
+                        <li><span class="btn settings-symbols"><img class="check" width="24" src="img/svg/check.svg" alt="check">символы</span>
+                        <li><span class="btn settings-numbers active"><img class="check" width="24" src="img/svg/check.svg" alt="check">цифры</span>
                     </ul>
-                    <span class="btn settings-no-repeat"><img class="check" width="24" src="/img/svg/check.svg" alt="check">без повторения знаков</span>
+                    <span class="btn settings-no-repeat"><img class="check" width="24" src="img/svg/check.svg" alt="check">без повторения знаков</span>
                 </div>
             </div>
         </div>
 
         <div id="generate-btn" class="btn-container">
             <span class="btn">Создать</span>
-            <img class="settings-icon" width="24" src="img/svg/settings.svg" alt="logo">
+            <img class="settings-icon" width="30" src="img/svg/settings.svg" alt="logo">
         </div>
 
-        <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
         <p>Специально для iPhone.<br>
         Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
         <p><?php echo date('Y'); ?> (с)<br>
@@ -74,6 +73,7 @@
     </section> <!-- .main-content -->
 
     <section class="content main-about">
+        <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 
         <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 
@@ -89,9 +89,9 @@
         Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
         <p class="social">
-            <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="/img/svg/github.svg" alt="github"></a>
-            <a href="https://twitter.com/_nikbelikov" target="_blank"><img width="60" src="/img/svg/twitter.svg" alt="github"></a>
-            <a href="mailto:nikbelikov@me.com"><img width="80" src="/img/svg/mail.svg" alt="github"></a>
+            <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="img/svg/github.svg" alt="github"></a>
+            <a href="https://twitter.com/_nikbelikov" target="_blank"><img width="60" src="img/svg/twitter.svg" alt="github"></a>
+            <a href="mailto:nikbelikov@me.com"><img width="80" src="img/svg/mail.svg" alt="github"></a>
         </p>
 
         <p><?php echo date('Y'); ?> (с)<br>
@@ -153,8 +153,6 @@
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>
 </html>
