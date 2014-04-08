@@ -20,7 +20,7 @@ var env = $$.environment(); // environment (browser, isMobile ect.)
 initBrowserCheck = function(){
     if (!$('html').hasClass('iphone')){
         $('.wrapper, #footer, .last-passwords').remove();
-        $.ajax('/inc/desktop.php',{
+        $.ajax('inc/desktop.php',{
             success: function(response){
                 $('body').prepend(response);
             },
