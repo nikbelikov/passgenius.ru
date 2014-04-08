@@ -1,70 +1,194 @@
-body.desktop
-    background: url(/img/bg-white.jpg) no-repeat center center
+html.desktop, html.tablet
+    background: url(/img/desktop-bg.jpg) no-repeat fixed
+    background-position: center center
     background-size: cover
+    width: 100%
+    height: 100%
+    font-family: "Helvetica Neue"
 
-    //color: $gray
+body
+    width: 100%
+    height: 100%
 
-    #footer
-        width: 100%
-        height: 50px
-        position: absolute
-        bottom: 22px
+#desktop
+    width: 960px
+    margin: 0 auto
+    padding: 50px 0 0
+
+    ::selection
+        background: #000000
 
     *
         user-select: initial
+        font-weight: 200
+        font-size: 18px
+        letter-spacing: 1px
+        line-height: 23px
+        color: rgba(255,255,255,0.8)
 
-#desktop
-    width: 100%
-    height: 100%
-    text-align: center
+    .main-title
+        font-size: 50px
+        text-align: center
+        line-height: 50px
+        font-weight: 100
+        margin: 0 0 15px
 
-    .title
-        font: 80px "Bad Script", cursive
-        color: white
-        padding-top: 50px
+    .main-desc
+        text-align: center
 
-    .container
-        position: relative
-        z-index: 1
-        height: 100%
+    h1
+        font-size: 25px
+        text-align: center
+        margin: 60px 0 60px
+        padding: 17px 20px
+        background: rgba(255,255,255,0.08)
+
+    .text-center
+        text-align: center
+
+    .iphone-image
+        margin-top: 50px
+
+    video
+        position: absolute
+        left: 562px
+        width: 256px
+        top: 297px
 
     p
-        font-size: 15px
-
-    .desktop-text
-        font-size: 15px
-        position: absolute
-        bottom: 130px
-        left: 50%
-        margin-left: -200px
-
-    #social
-        position: fixed
-        left: 50%
-        bottom: 50px
-        width: auto
-        margin-left: -70px
-
-        a
-            display: block
-            float: left
-            margin-right: 15px
-            font-size: 40px
-            opacity: 0.5
-            //color: $blue
-            transition: opacity .3s ease, text-shadow .3s ease
-            border: none
-            bottom: 10px
-
-            &:hover
-                opacity: 0.8
-                //text-shadow: 0 0 10px $blue
-
-            &:last-child
-                margin-right: 0
+        width: 100%
+        margin-bottom: 20px
 
     a
-        transition: border .3s ease
+        text-decoration: none
+        border-bottom: 1px solid white
+        transition: border-color .2s ease
 
         &:hover
-            border-bottom: 1px solid transparent
+            border-color: transparent
+
+    .social a
+        border-color: transparent
+        transition: opacity .2s ease
+
+        &:hover
+            opacity: 1
+
+    .features
+        position: relative
+
+        .main-scheme
+            opacity: 1
+            transition: opacity .6s ease
+
+            &.hid
+                opacity: 0
+
+        .rounded-ui
+            position: absolute
+            top: 10px
+            left: 328px
+            opacity: 0
+            transition: opacity 1s ease
+
+            &.vis
+                opacity: 1
+
+        .icon
+            position: absolute
+            opacity: 0.8
+
+            &.desk-pencil
+                top: 0
+                left: 236px
+                transition: transform .2s ease
+
+                &:hover
+                    transform: rotate(-107deg)
+
+                + span
+                    top: 40px
+                    left: 40px
+                    width: 200px
+
+            &.desk-svg
+                top: 137px
+                left: 75px
+                transition: width .5s ease, top .5s ease
+
+                &:hover
+                    width: 150px
+                    top: 80px
+
+                + span
+                    top: 226px
+                    left: 75px
+                    width: 230px
+
+            &.desk-settings
+                top: 12px
+                right: 230px
+                transition: transform .5s ease
+
+                &:hover
+                    transform: rotate(260deg)
+
+                + span
+                    top: 30px
+                    right: 50px
+                    width: 200px
+
+            &.desk-apple
+                top: 155px
+                right: 51px
+                transition: opacity .5s ease
+                z-index: 1
+
+                &:hover
+                    opacity: 0
+
+                + span
+                    top: 199px
+                    right: 84px
+                    width: 240px
+
+        span
+            position: absolute
+            font-size: 18px
+
+    .row
+        +clearfix
+
+    .col-4
+        width: 33.3333333333%
+        float: left
+        text-align: center
+
+    .versions
+        a
+            border-bottom: none
+
+        h2
+            font-size: 16px
+            background: rgba(255,255,255,0.08)
+            border-left: 1px solid white
+
+        img
+            margin-bottom: 30px
+            transition: all .2s ease
+
+            &:hover
+                transform: scale(1.05)
+
+    ul, ol
+        text-align: left
+        padding-left: 30px
+
+        li
+            font-size: 13px
+
+    .footer
+        margin-top: 30px
+
+        p, a
+            font-size: 13px

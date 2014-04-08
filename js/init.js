@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //initBrowserCheck();     // browser check
+    initBrowserCheck();     // browser check
     initMainTabs();         // main tabs
     initGeneratePass();     // generate password
     initSettings();         // password settings
@@ -19,13 +19,13 @@ var env = $$.environment(); // environment (browser, isMobile ect.)
 
 initBrowserCheck = function(){
     if (!$('html').hasClass('iphone')){
-        $('.wrapper, #footer').remove();
+        $('.wrapper, #footer, .last-passwords').remove();
         $.ajax('/inc/desktop.php',{
             success: function(response){
-                $('body').addClass('desktop').prepend(response);
+                $('body').prepend(response);
             },
             error: function(request, errorType, errorMessage){
-                $('body').addClass('desktop');
+                //$('body').addClass('desktop');
             },
             timeout: 3000
         });
@@ -151,26 +151,28 @@ var initSettings = function(){
     });
 
     // слайдер с выбором длины пароля
-    var Link = $.noUiSlider.Link;
-    $(".length-slider").noUiSlider({
-        start: length,
-        range: {
-            'min': 6,
-            'max': 30
-        },
-        serialization: {
-            lower: [
-                new Link({
-                    // отображаем длину пароля
-                    target: $('.length .number'),
-                    method: setPasswordLength
-                })
-            ],
-            format: {
-                decimals: 0
+    if ($(".length-slider").length){
+        var Link = $.noUiSlider.Link;
+        $(".length-slider").noUiSlider({
+            start: length,
+            range: {
+                'min': 6,
+                'max': 30
+            },
+            serialization: {
+                lower: [
+                    new Link({
+                        // отображаем длину пароля
+                        target: $('.length .number'),
+                        method: setPasswordLength
+                    })
+                ],
+                format: {
+                    decimals: 0
+                }
             }
-        }
-    });
+        });
+    }
 };
 
 function closeLastPass(){
