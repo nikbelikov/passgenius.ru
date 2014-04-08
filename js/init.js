@@ -63,35 +63,41 @@ function GeneratePass(chars, length, no_repeat){
 
 initGeneratePass = function(){
     $$('#generate-btn .btn').tap(function(){
-        // генерируем пароль
-        var change_pass_animation = 'flipInX';
+        if (!$(this).hasClass('disabled')){
+            $(this).addClass('disabled');
 
-        $('.password').addClass('selectable')
-            .removeClass('small')
-            .html(GeneratePass(chars, length, no_repeat))
-            .addClass(change_pass_animation);
+            // генерируем пароль
+            var change_pass_animation = 'flipInX';
 
-        setTimeout(function(){
-            $('.password').removeClass(change_pass_animation);
-        },500);
+            $('.password').addClass('selectable')
+                .removeClass('small')
+                .html(GeneratePass(chars, length, no_repeat))
+                .addClass(change_pass_animation);
 
-        // добавляем последние пароли в popup
-        var last_passwords = 6;
-        if($('.last-passwords li').length != last_passwords) {
-            $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
+            var $this = $(this);
+            setTimeout(function(){
+                $('.password').removeClass(change_pass_animation);
+                $this.removeClass('disabled');
+            },500);
+
+            // добавляем последние пароли в popup
+            var last_passwords = 6;
+            if($('.last-passwords li').length != last_passwords) {
+                $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
+            }
+            else {
+                $('.last-passwords ul li:last').remove();
+                $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
+            }
+
+            // если сгенерировано больше одного пароля,
+            // показываем иконку списка последних паролей
+            if ($('.last-passwords li').length > 1) {
+                $('.last-passwords-icon').removeClass('hidden-hard');
+            }
+
+            hideSettings();
         }
-        else {
-            $('.last-passwords ul li:last').remove();
-            $('.last-passwords ul').prepend("<li>"+$('.password').html()+"</li>");
-        }
-
-        // если сгенерировано больше одного пароля,
-        // показываем иконку списка последних паролей
-        if ($('.last-passwords li').length > 1) {
-            $('.last-passwords-icon').removeClass('hidden-hard');
-        }
-
-        hideSettings();
     });
 };
 
