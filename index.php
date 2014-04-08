@@ -110,7 +110,7 @@
 <script src="js/lib/quo.js"></script>
 <script src="js/lib/device.min.js"></script>
 <script src="js/lib/jquery.nouislider.min.js"></script>
-<script src="js/init.js"></script>
+<script src="js/lib/init.js"></script>
 
 <!-- Google Analitycs counter -->
 <script>
