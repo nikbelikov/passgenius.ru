@@ -24,7 +24,7 @@
 
 <body>
 
-<div id="fade-box" class="vis"></div>
+<div id="fade-box"></div>
 
 <div class="wrapper">
 

@@ -25,7 +25,7 @@ initBrowserCheck = function(){
                 $('body').prepend(response);
             },
             error: function(request, errorType, errorMessage){
-                //$('body').addClass('desktop');
+                console.log('Ошибка при ajax-запросе!');
             },
             timeout: 3000
         });
