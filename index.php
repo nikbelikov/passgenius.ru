@@ -1,149 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>PassGenius - Генератор паролей для iPhone</title>
-	<meta name="keywords" content="генератор, пароль, iphone, passgenius" />
-	<meta name="description" content="PassGenius - генератор паролей для iPhone. Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
+    <meta charset="utf-8" />
+    <title>PassGenius - Генератор паролей для iPhone</title>
+    <meta name="keywords" content="генератор, пароль, iphone, passgenius" />
+    <meta name="description" content="PassGenius - генератор паролей для iPhone. Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
 
-	<noscript><meta http-equiv="refresh" content="0;url=nojs.php"/></noscript>
+    <noscript><meta http-equiv="refresh" content="0;url=nojs.php"/></noscript>
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="PassGenius" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PassGenius" />
 
-	<link rel="apple-touch-startup-image" href="startup-image.png" />
-	<link rel="apple-touch-startup-image" href="startup-image-iphone5.png" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="startup-image.png" />
+    <link rel="apple-touch-startup-image" href="startup-image-iphone5.png" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
 
-	<meta name="viewport" content="width=640, user-scalable=no">
-	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen, projection" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen, projection" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
-
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="js/lib/quo.js"></script>
-	<script type="text/javascript" src="js/lib/device.min.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+    <link rel="stylesheet" href="css/all.css">
 </head>
 
 <body>
 
-<div id="black-box" class="vis"><i class="icon-unlock-alt icon-spin"></i></div>
+<div id="fade-box"></div>
 
 <div class="wrapper">
 
-	<header id="header">
-		<ul class="list-btn">
-			<li><span class="btn active">Пароль</span>
-			<li><span class="btn">О проекте</span>
-		</ul>
-	</header><!-- #header-->
+    <header>
+        <img width="52" height="52" src="img/svg/min/lock.svg" alt="logo">
+        <span class="name">PassGenius</span>
 
-	<div class="content main-content active">
-		<ul id="compl" class="list-btn small-list-btn">
-			<li><span id="hard" class="btn">Сложный</span>
-			<li><span id="web" class="btn active">Web</span>
-			<li><span id="simple" class="btn">Простой</span>
-			<li><span id="pin" class="btn">PIN</span>
-		</ul>
+        <ul class="list-btn">
+            <li><span class="btn active">Пароль</span>
+            <li><span class="btn">О проекте</span>
+        </ul>
+    </header> <!-- #header-->
 
-		<div class="canvas-wrapper">
-			<div class="canvas">
-				<p class="password small">Нажмите на "Создать"</p>
-			</div>
-		</div>
+    <section class="content main-content active">
 
-		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i id="last-passwords" class="icon-list-ul disabled"></i></div>
+        <img class="last-passwords-icon hidden-hard" width="35" src="img/svg/min/list.svg" alt="last-passwords">
 
-		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
-		<p>Специально для iPhone.<br>
-		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-		<p><?php echo date('Y'); ?> (с)<br>
-		PassGenius.ru</p>
-	</div> <!-- .main-content -->
+        <div class="canvas-wrapper">
+            <div class="canvas">
+                <p class="password animated small">Нажмите на "Создать"</p>
+                <div class="settings">
+                    <div class="length">
+                        длина
+                        <span class="number">12</span>
+                    </div>
+                    <div class="length-slider"></div>
+                    <ul class="list-btn">
+                        <li><span class="btn settings-symbols"><img class="check" width="24" src="img/svg/min/check.svg" alt="check">символы</span>
+                        <li><span class="btn settings-numbers active"><img class="check" width="24" src="img/svg/min/check.svg" alt="check">цифры</span>
+                    </ul>
+                    <span class="btn settings-no-repeat"><img class="check" width="24" src="img/svg/min/check.svg" alt="check">без повторения знаков</span>
+                </div>
+            </div>
+        </div>
 
-	<div class="content main-about">
+        <div id="generate-btn" class="btn-container">
+            <span class="btn">Создать</span>
+            <img class="settings-icon" width="30" src="img/svg/min/settings.svg" alt="logo">
+        </div>
 
-		<p>Проект PassGenius создавался для тех, кто дорожит своими аккаунтами в сети Интернет и использует правильные пароли.</p>
+        <p>Специально для iPhone.<br>
+        Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+        <p><?php echo date('Y'); ?> (с)<br>
+        PassGenius.ru</p>
 
-		<div class="canvas-wrapper">
-			<div class="canvas">
-				<img src="img/image.jpg" alt="image">
-			</div>
-		</div>
+    </section> <!-- .main-content -->
 
-		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a class="blue" href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
-		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
+    <section class="content main-about">
+        <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 
-		<p>Ранние версии:<br>
-			<a class="blue" href="http://passgenius.ru/v1.0/" target="_blank">v1.0</a>,
-			<a class="blue" href="http://passgenius.ru/v2.0/" target="_blank">v2.0</a> + <a class="blue" href="http://passgenius.ru/v2.0/presentation" target="_blank">презентация</a>
-		</p>
+        <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 
-		<p>Специально для iPhone.<br>
-		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+        <p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
-		<p class="social">
-			<a class="icon-github" href="https://github.com/nikbelikov/passgenius.ru" target="_blank"></a>
-			<a class="icon-twitter" href="https://twitter.com/_nikbelikov" target="_blank"></a>
-			<a class="icon-envelope-alt" href="mailto:nikbelikov@me.com"></a>
-		</p>
+        <p>Ранние версии:<br>
+            <a href="/1" target="_blank">v1.0</a>,
+            <a href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>,
+            <a href="/3" target="_blank">v3.0</a>
+        </p>
 
-		<p><?php echo date('Y'); ?> (с)<br>
-		PassGenius.ru<sup>v3.0</sup></p>
-	</div> <!-- .main-about -->
+        <p>Специально для iPhone.<br>
+        Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
-</div><!-- .wrapper -->
+        <p class="social">
+            <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="img/svg/min/github.svg" alt="github"></a>
+            <a href="https://twitter.com/_nikbelikov" target="_blank"><img width="60" src="img/svg/min/twitter.svg" alt="github"></a>
+            <a href="mailto:nikbelikov@me.com"><img width="80" src="img/svg/min/mail.svg" alt="github"></a>
+        </p>
 
-<div class="last-passwords">
-	<div class="close hidden"></div>
-	<ul></ul>
-</div>
+        <p><?php echo date('Y'); ?> (с)<br>
+        PassGenius.ru<sup>v4</sup></p>
 
-<footer id="footer"></footer>
+    </section> <!-- .main-about -->
+
+</div> <!-- .wrapper -->
+
+<section class="last-passwords">
+    <div class="close hidden"></div>
+    <ul></ul>
+</section>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/lib/quo.js"></script>
+<script src="js/lib/device.min.js"></script>
+<script src="js/lib/jquery.nouislider.min.js"></script>
+<script src="js/lib/init.js"></script>
 
 <!-- Google Analitycs counter -->
-<script type="text/javascript">
+<script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-39701630-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
 <!-- /Google Analitycs counter -->
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+<script>
 (function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter20781985 = new Ya.Metrika({id:20781985,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true});
-        } catch(e) { }
-    });
+     (w[c] = w[c] || []).push(function() {
+         try {
+             w.yaCounter20781985 = new Ya.Metrika({id:20781985,
+                     webvisor:true,
+                     clickmap:true,
+                     trackLinks:true,
+                     accurateTrackBounce:true});
+         } catch(e) { }
+     });
 
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+     var n = d.getElementsByTagName("script")[0],
+         s = d.createElement("script"),
+         f = function () { n.parentNode.insertBefore(s, n); };
+     s.type = "text/javascript";
+     s.async = true;
+     s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
+     if (w.opera == "[object Opera]") {
+         d.addEventListener("DOMContentLoaded", f, false);
+     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>

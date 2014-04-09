@@ -63,7 +63,7 @@ html.dark .last-passwords ul li:active {
 }
 
 html.dark body.desktop {
-  background: url(/img/bg-black.jpg);
+  background: url(../img/bg-black.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -436,7 +436,7 @@ sup {
 }
 
 body.desktop {
-  background: url(/img/bg-white.jpg);
+  background: url(../img/bg-white.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

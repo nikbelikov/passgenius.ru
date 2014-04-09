@@ -1,0 +1,78 @@
+.settings
+    width: 450px
+    height: 304px
+    background: rgba(0,0,0,0.35)
+    border-radius: $radius
+    position: absolute
+    left: -1000px
+    top: 0
+    padding: 30px
+    font-size: 25px
+    text-align: left
+    opacity: 0
+    transition: left 0 linear .5s // left transition needs for all pages view in mobile safari
+
+    &:after
+        content: ''
+        display: block
+        width: 0
+        height: 0
+        border-left: 17px solid transparent
+        border-right: 17px solid transparent
+        border-top: 17px solid rgba(0,0,0,0.35)
+        position: absolute
+        bottom: -17px
+        right: 52px
+
+    &.flipInX
+        left: 65px
+        transition: left 0 linear 0
+
+    .list-btn
+        li
+            &:first-child .btn
+                border-right: none
+
+            .btn
+                width: 223px
+                border: 1px solid $main-color
+                background: transparent
+
+                &.active
+                    background: rgba(255,255,255,0.8)
+
+                    &:active
+                        background: white
+
+    .btn
+        width: 447px
+        font-size: 24px
+        padding: 18px 0
+        text-align: center
+        background: transparent
+        position: relative
+
+        &.active
+            background: rgba(255,255,255,0.8)
+
+            .check
+                width: 30px
+                left: 16px
+                opacity: 1
+
+            &:active
+                background: white
+
+        .check
+            position: absolute
+            width: 0
+            left: 0
+            top: 13px
+            opacity: 0
+            transition: left .2s ease, opacity .2s ease, width .2s ease
+
+    .length
+        margin-bottom: 50px
+
+        .number
+            float: right

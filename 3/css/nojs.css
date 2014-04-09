@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=30&opacity=14);
+}
+body {
+	font-family: "Ubuntu",sans-serif;
+	color: #000;
+	font-size: 24px;
+	line-height: 20px;
+}
+a, p {
+	color: #108CFF;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 -251px;
+}

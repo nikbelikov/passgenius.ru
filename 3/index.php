@@ -19,17 +19,21 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
-	<link rel="stylesheet" href="css/lib/normalize.css" type="text/css" media="screen, projection" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/lib/quo.js"></script>
+	<script type="text/javascript" src="js/lib/device.min.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
 </head>
 
 <body>
 
-<div id="black-box" class="vis"></div>
+<div id="black-box" class="vis"><i class="icon-unlock-alt icon-spin"></i></div>
 
 <div class="wrapper">
 
@@ -50,53 +54,56 @@
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
-				<span id="help-link">?</span>
 				<p class="password small">Нажмите на "Создать"</p>
-				<div id="help">
-					<div id="help-close"></div>
-					<img src="img/help.png" alt="help">
-				</div>
 			</div>
 		</div>
 
-		<div id="generate-btn" class="btn-container"><span class="btn">Создать</span></div>
+		<div id="generate-btn" class="btn-container"><span class="btn"><i class="icon-beaker"></i> Создать</span> <i id="last-passwords" class="icon-list-ul disabled"></i></div>
 
 		<p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 		<p>Специально для iPhone.<br>
-		Разработка: <a class="brown" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-		<p><?php echo date('Y'); ?> (с)<br>
+		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+		<p>2013 (с)<br>
 		PassGenius.ru</p>
 	</div> <!-- .main-content -->
 
 	<div class="content main-about">
-		<p><img id="icon" src="img/icon-pg.png" alt="icon"></p>
 
 		<p>Проект PassGenius создавался для тех, кто дорожит своими аккаунтами в сети Интернет и использует правильные пароли.</p>
 
 		<div class="canvas-wrapper">
 			<div class="canvas">
-				<img src="img/iphone.jpg" alt="iphone">
+				<img src="img/image.jpg" alt="image">
 			</div>
 		</div>
 
-		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на nikbelikov@me.com.</p>
+		<p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a class="blue" href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 		<p>Также вы можете помочь в развитии проекта на GitHub.</p>
 
-		<p>Специально для iPhone.<br>
-		Разработка: <a class="grey" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-
-		<p class="social">
-			<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>
-			<a href="https://twitter.com/_nikbelikov" target="_blank"><img src="img/icon-twitter.png" alt="twitter"></a>
-			<a href="mailto:nikbelikov@me.com"><img src="img/icon-mail.png" alt="mail"></a>
-			<a href="http://passgenius.ru/v2.0/presentation/" target="_blank"><img src="img/icon-presentation.png" alt="presentation"></a>
+		<p>Ранние версии:<br>
+			<a class="blue" href="/1" target="_blank">v1.0</a>,
+			<a class="blue" href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>
 		</p>
 
-		<p><?php echo date('Y'); ?> (с)<br>
-		PassGenius.ru</p>
+		<p>Специально для iPhone.<br>
+		Разработка: <a class="blue" href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+
+		<p class="social">
+			<a class="icon-github" href="https://github.com/nikbelikov/passgenius.ru" target="_blank"></a>
+			<a class="icon-twitter" href="https://twitter.com/_nikbelikov" target="_blank"></a>
+			<a class="icon-envelope-alt" href="mailto:nikbelikov@me.com"></a>
+		</p>
+
+		<p>2013 (с)<br>
+		PassGenius.ru<sup>v3.0</sup></p>
 	</div> <!-- .main-about -->
 
 </div><!-- .wrapper -->
+
+<div class="last-passwords">
+	<div class="close hidden"></div>
+	<ul></ul>
+</div>
 
 <footer id="footer"></footer>
 

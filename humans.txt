@@ -5,13 +5,12 @@
     Belikov Nikolay -- Design and Development -- @_nikbelikov, nikbelikov@me.com
 
 # THANKS
-    to my Muse and Elvis Presley's songs
+    to my Muse and Placebo's songs
 
 # TECHNOLOGY COLOPHON
-    HTML5, CSS3
-    Sass, Compass, Autoprefixer
-    jQuery, QUOjs
-    Font Awesome and Google Web Fonts
+    HTML5, CSS3, SVG
+    Sass, Autoprefixer, Gulp js
+    jQuery, QUOjs, devicejs, noui slider
 
 # USED
-    HP Pavilion Laptop, Linux Ubuntu, Git, GitFlow, Google Chrome Web Browser, Sublime Text and ST Extensions, Gimp, iPhone 4
+    Mavericks, WebStorm 8, Photoshop CC, Tower for Git, Google Chrome Web Browser, XCode iOS Simulator

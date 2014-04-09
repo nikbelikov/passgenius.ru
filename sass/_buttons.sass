@@ -1,0 +1,71 @@
+.btn-container
+    text-align: center
+
+.btn
+    display: inline-block
+    padding: 28px 173px
+    margin: 0 auto 40px
+    color: $main-color
+    background: $bg-normal
+    border-radius: $radius
+    border: 1px solid $main-color
+    font-size: 27px
+    transition: background .5s ease, color .5s ease
+
+    &:active, &.active
+        background: $bg-active
+        color: $secondary-color
+        transition: background .1s ease, color .1s ease
+
+.list-btn
+    list-style: none
+    margin: 60px 0 50px
+    display: inline-block
+    padding: 0
+    +clearfix
+
+    li
+        float: left
+
+        &:first-child span
+            border-radius: $radius 0 0 $radius
+
+        &:last-child span
+            border-radius: 0 $radius $radius 0
+
+        span
+            width: 225px
+            padding: 21px 0
+            margin: 0
+            font-size: 25px
+            border: none
+            border-radius: 0
+            text-align: center
+
+#generate-btn
+    .btn
+        position: relative
+        background: rgba(255,255,255,0.1)
+        margin-bottom: 70px
+        transition: none
+
+        &:active
+            background: rgba(255,255,255,0.8)
+
+            + .settings-icon
+                opacity: 0
+
+    .settings-icon
+        position: absolute
+        padding: 24px
+        right: 95px
+        z-index: 10
+        border-radius: 0 $radius $radius 0
+        transition: background .1s ease
+
+        &:active, &.active
+            background: rgba(255,255,255,0.2)
+            
+        &.active
+            &:active
+                background: rgba(255,255,255,0.3)
