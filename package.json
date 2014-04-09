@@ -7,6 +7,7 @@
     "gulp-compass": "*",
     "gulp-autoprefixer": "*",
     "gulp-csso": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "gulp-svgmin": "*"
   }
 }

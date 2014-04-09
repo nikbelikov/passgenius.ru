@@ -2,11 +2,13 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    svgmin = require('gulp-svgmin');
 
 var paths = {
     sass: ['sass/**/*.sass'],
-    js: ['js/**/*.js']
+    js: ['js/**/*.js'],
+    svg: ['img/svg/**/*.svg']
 };
 
 gulp.task('sass', function() {
@@ -26,13 +28,15 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest('js/lib'))
 });
 
+gulp.task('svgmin', function() {
+    return gulp.src('img/svg/*.svg')
+        .pipe(svgmin())
+        .pipe(gulp.dest('img/svg/min'));
+});
+
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.js, ['uglify']);
-
-    // gulp.watch(paths.sass, function(){
-    //     gulp.run('sass');
-    // });
 });
 
 gulp.task('default', ['sass', 'uglify']);
