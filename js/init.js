@@ -29,6 +29,9 @@ initBrowserCheck = function(){
             },
             timeout: 3000
         });
+
+        var viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute('content', 'width=device-width');
     }
 };
 
