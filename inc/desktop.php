@@ -66,7 +66,7 @@
             <a href="mailto:nikbelikov@me.com"><img width="55" src="img/svg/min/mail.svg" alt="github"></a>
         </p>
         <p class="text-center">
-            <?php echo date('Y'); ?> (c)<br>
+            2011-<?php echo date('Y'); ?> (c)<br>
             PassGenius.ru
         </p>
     </div>
