@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>PassGenius - Генератор паролей для iPhone</title>
+    <title>PassGenius — Генератор паролей для iPhone</title>
     <meta name="keywords" content="генератор, пароль, iphone, passgenius" />
     <meta name="description" content="PassGenius - генератор паролей для iPhone. Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
 
@@ -44,7 +44,7 @@
 
         <div class="canvas-wrapper">
             <div class="canvas">
-                <p class="password animated small">Нажмите на "Создать"</p>
+                <p class="password animated small">Нажмите «Создать»</p>
                 <div class="settings">
                     <div class="length">
                         длина
@@ -67,13 +67,12 @@
 
         <p>Специально для iPhone.<br>
         Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-        <p><?php echo date('Y'); ?> (с)<br>
-        PassGenius.ru</p>
+        <p>© PassGenius.ru, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-content -->
 
     <section class="content main-about">
-        <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
+        <p>PassGenius — это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 
         <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 
@@ -94,8 +93,7 @@
             <a href="mailto:nikbelikov@me.com"><img width="80" src="img/svg/min/mail.svg" alt="github"></a>
         </p>
 
-        <p><?php echo date('Y'); ?> (с)<br>
-        PassGenius.ru<sup>v4</sup></p>
+        <p>© PassGenius.ru<sup>v4</sup>, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-about -->
 
