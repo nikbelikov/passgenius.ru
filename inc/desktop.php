@@ -6,6 +6,12 @@
         <img width="335" src="img/iphone.png" alt="iphone"/>
     </div>
 
+    <h1>Как пользоваться?</h1>
+    <p class="text-center how-to-use">
+        <img width="238" src="img/svg/homescreen.svg" alt="homescreen"/>
+        <span>Зайдите на этот сайт со своего iPhone и добавьте страницу на рабочий стол.</span>
+    </p>
+
     <h1>Что нового?</h1>
     <p class="text-center features">
         <img class="main-scheme" src="img/svg/min/main-scheme.svg" alt="scheme"/>

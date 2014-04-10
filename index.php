@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>PassGenius - Генератор паролей для iPhone</title>
+    <title>PassGenius — Генератор паролей для iPhone</title>
     <meta name="keywords" content="генератор, пароль, iphone, passgenius" />
     <meta name="description" content="PassGenius - генератор паролей для iPhone. Простой генератор паролей, который поможет вам создать пароль для любого онлайн-ресурса." />
 
@@ -44,7 +44,7 @@
 
         <div class="canvas-wrapper">
             <div class="canvas">
-                <p class="password animated small">Нажмите на "Создать"</p>
+                <p class="password animated small">Нажмите «Создать»</p>
                 <div class="settings">
                     <div class="length">
                         длина
@@ -66,14 +66,13 @@
         </div>
 
         <p>Специально для iPhone.<br>
-        Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-        <p><?php echo date('Y'); ?> (с)<br>
-        PassGenius.ru</p>
+            Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+        <p>© PassGenius.ru, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-content -->
 
     <section class="content main-about">
-        <p>PassGenius - это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
+        <p>PassGenius — это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 
         <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 
@@ -86,7 +85,7 @@
         </p>
 
         <p>Специально для iPhone.<br>
-        Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
+            Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
         <p class="social">
             <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="img/svg/min/github.svg" alt="github"></a>
@@ -94,8 +93,7 @@
             <a href="mailto:nikbelikov@me.com"><img width="80" src="img/svg/min/mail.svg" alt="github"></a>
         </p>
 
-        <p><?php echo date('Y'); ?> (с)<br>
-        PassGenius.ru<sup>v4</sup></p>
+        <p>© PassGenius.ru, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-about -->
 
@@ -114,42 +112,42 @@
 
 <!-- Google Analitycs counter -->
 <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39701630-1']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39701630-1']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 </script>
 <!-- /Google Analitycs counter -->
 
 <!-- Yandex.Metrika counter -->
 <script>
-(function (d, w, c) {
-     (w[c] = w[c] || []).push(function() {
-         try {
-             w.yaCounter20781985 = new Ya.Metrika({id:20781985,
-                     webvisor:true,
-                     clickmap:true,
-                     trackLinks:true,
-                     accurateTrackBounce:true});
-         } catch(e) { }
-     });
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter20781985 = new Ya.Metrika({id:20781985,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
 
-     var n = d.getElementsByTagName("script")[0],
-         s = d.createElement("script"),
-         f = function () { n.parentNode.insertBefore(s, n); };
-     s.type = "text/javascript";
-     s.async = true;
-     s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-     if (w.opera == "[object Opera]") {
-         d.addEventListener("DOMContentLoaded", f, false);
-     } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
