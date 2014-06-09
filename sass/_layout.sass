@@ -36,6 +36,7 @@ sup
     width: 640px
     margin: 0 auto
     min-height: 100%
+    overflow: hidden
     height: auto !important
     height: 100%
     transition: opacity .2s ease, transform .2s ease
@@ -47,16 +48,19 @@ sup
 
     .content
         position: relative
-        top: -20px
+        left: -40px
         height: 0
         opacity: 0
         padding: 0
-        transition: top .5s ease, opacity .5s ease, height .5s ease
+        transition: left .5s ease, opacity .5s ease, height .5s ease
 
         &.active
-            top: 0
+            left: 0 !important
             opacity: 1
             height: auto
+
+        &.main-about
+            left: 40px
 
 #fade-box
     width: 100%
