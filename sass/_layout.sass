@@ -60,7 +60,21 @@ sup
             height: auto
 
         &.main-about
-            left: 40px
+            p
+                position: relative
+                left: 80px
+                opacity: 0
+                transition: none
+
+            &.active p
+                left: 0
+                opacity: 1
+                transition: left .5s, opacity 1s
+
+                @for $i from 2 through 7
+                    &:nth-child(#{$i})
+                        $val: $i/30
+                        transition-delay: #{$val}s
 
 #fade-box
     width: 100%
