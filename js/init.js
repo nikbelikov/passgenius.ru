@@ -48,13 +48,6 @@ initMainTabs = function(){
 
         $(this).parent().find('.btn').removeClass('active');
         $(this).find('.btn').addClass('active');
-
-        // восстанавливаем главные вкладки (пароль, о проекте)
-        if (localStorage.getItem('mainTabs')){
-            localStorage.setItem('mainTabs', $('header .list-btn').html());
-            localStorage.setItem('mainContentClasses', $('.main-content').attr('class'));
-            localStorage.setItem('mainAboutClasses', $('.main-about').attr('class'));
-        }
     });
 };
 
@@ -253,11 +246,7 @@ initLastPasswords = function(){
 initLocalStorage = function(){
     var getPassword = localStorage.getItem('password'),
         getLastPasswords = localStorage.getItem('lastPasswords'),
-        showLastPassIcon = localStorage.getItem('showLastPassIcon'),
-        getMainTabs = localStorage.getItem('mainTabs'),
-        getMainContentClasses = localStorage.getItem('mainContentClasses'),
-        getMainAboutClasses = localStorage.getItem('mainAboutClasses')
-        ;
+        showLastPassIcon = localStorage.getItem('showLastPassIcon');
 
     if (getPassword){
         // показываем пароль и список последних паролей
@@ -268,15 +257,6 @@ initLocalStorage = function(){
         if (showLastPassIcon){
             $('.last-passwords-icon').removeClass('hidden-hard');
         }
-
-        // табы и содержимое
-        $('header .list-btn').html(getMainTabs);
-        $('.main-content').attr('class', getMainContentClasses);
-        $('.main-about').attr('class', getMainAboutClasses);
-
-        // класс нужен для того, чтобы не было скачков контентных блоков
-        // после загрузки страницы
-        $('.wrapper .content').addClass('no-animation');
 
         // расстановка настроек пароля (кнопки)
         if (localStorage.getItem('settingsSymbols')){
