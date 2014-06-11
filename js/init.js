@@ -35,7 +35,7 @@ initBrowserCheck = function(){
         });
 
         var viewport = document.querySelector("meta[name=viewport]");
-        viewport.setAttribute('content', 'width=device-width');
+        viewport.setAttribute('content', 'width=1000');
     }
 };
 
