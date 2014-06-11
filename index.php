@@ -40,9 +40,9 @@
 
     <section class="content main-content active">
 
-        <img class="last-passwords-icon hidden-hard" width="35" src="img/svg/min/list.svg" alt="last-passwords">
+        <img class="last-passwords-icon hidden-hard main-element" width="35" src="img/svg/min/list.svg" alt="last-passwords">
 
-        <div class="canvas-wrapper">
+        <div class="canvas-wrapper main-element">
             <div class="canvas">
                 <p class="password animated small">Нажмите «Создать»</p>
                 <div class="settings">
@@ -60,14 +60,14 @@
             </div>
         </div>
 
-        <div id="generate-btn" class="btn-container">
+        <div id="generate-btn" class="btn-container main-element">
             <span class="btn">Создать</span>
             <img class="settings-icon" width="30" src="img/svg/min/settings.svg" alt="logo">
         </div>
 
-        <p>Специально для iPhone.<br>
+        <p class="main-element">Специально для iPhone.<br>
             Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
-        <p>© PassGenius.ru, <?php echo date('Y'); ?></p>
+        <p class="main-element">© PassGenius.ru, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-content -->
 
