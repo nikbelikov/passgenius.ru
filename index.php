@@ -72,28 +72,28 @@
     </section> <!-- .main-content -->
 
     <section class="content main-about">
-        <p>PassGenius — это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
+        <p class="main-element">PassGenius — это простой генератор паролей, который поможет создать пароль для любого онлайн-ресурса.</p>
 
-        <p>Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
+        <p class="main-element">Если у вас имеются какие-либо вопросы или пожелания, пишите письма на <a href="mailto:nikbelikov@me.com">nikbelikov@me.com</a>.</p>
 
-        <p>Также вы можете помочь в развитии проекта на GitHub.</p>
+        <p class="main-element">Также вы можете помочь в развитии проекта на GitHub.</p>
 
-        <p>Ранние версии:<br>
+        <p class="main-element">Ранние версии:<br>
             <a href="/1" target="_blank">v1.0</a>,
             <a href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>,
             <a href="/3" target="_blank">v3.0</a>
         </p>
 
-        <p>Специально для iPhone.<br>
+        <p class="main-element">Специально для iPhone.<br>
             Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a></p>
 
-        <p class="social">
+        <p class="social main-element">
             <a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img width="58" src="img/svg/min/github.svg" alt="github"></a>
             <a href="https://twitter.com/_nikbelikov" target="_blank"><img width="60" src="img/svg/min/twitter.svg" alt="github"></a>
             <a href="mailto:nikbelikov@me.com"><img width="80" src="img/svg/min/mail.svg" alt="github"></a>
         </p>
 
-        <p>© PassGenius.ru, <?php echo date('Y'); ?></p>
+        <p class="main-element">© PassGenius.ru, <?php echo date('Y'); ?></p>
 
     </section> <!-- .main-about -->
 

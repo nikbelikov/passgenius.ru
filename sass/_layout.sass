@@ -55,42 +55,27 @@ sup
         +clearfix
         transition: left .5s ease, opacity .5s ease, height .5s ease
 
+        .main-element
+            position: relative
+            left: -80px
+            opacity: 0
+            transition: none
+
+        &.main-about
+            .main-element
+                left: 80px
+
         &.active
             left: 0 !important
             opacity: 1
             height: auto
 
-        &.main-content
+            .last-passwords-icon
+                position: absolute !important
+                left: 96px !important
+
             .main-element
                 position: relative
-                left: -80px
-                opacity: 0
-                transition: none
-
-            &.active
-                .last-passwords-icon
-                    position: absolute !important
-                    left: 96px !important
-
-                .main-element
-                    position: relative
-                    left: 0
-                    opacity: 1
-                    transition: left .5s, opacity 1s
-
-                    @for $i from 2 through 7
-                        &:nth-child(#{$i})
-                            $val: $i/30
-                            transition-delay: #{$val}s
-
-        &.main-about
-            p
-                position: relative
-                left: 80px
-                opacity: 0
-                transition: none
-
-            &.active p
                 left: 0
                 opacity: 1
                 transition: left .5s, opacity 1s
@@ -119,7 +104,6 @@ header
         top: -11px
 
 .main-content, .main-about
-    //overflow: hidden
     padding-top: 35px
 
 .main-about p
