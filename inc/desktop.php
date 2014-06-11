@@ -8,7 +8,7 @@
 
     <h1>Как пользоваться?</h1>
     <p class="text-center how-to-use">
-        <img width="238" src="img/svg/homescreen.svg" alt="homescreen"/>
+        <img width="238" src="img/svg/min/homescreen.svg" alt="homescreen"/>
         <span>Зайдите на этот сайт со своего iPhone и добавьте страницу на рабочий стол.</span>
     </p>
 
