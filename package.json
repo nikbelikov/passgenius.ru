@@ -1,13 +1,14 @@
 {
-  "name": "PassGenius",
-  "author": "Nikolay Belikov",
-  "private": true,
-  "devDependencies": {
-    "gulp": "*",
-    "gulp-compass": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-csso": "*",
-    "gulp-uglify": "*",
-    "gulp-svgmin": "*"
-  }
+    "name": "PassGenius",
+    "author": "Nikolay Belikov",
+    "private": true,
+    "devDependencies": {
+        "gulp": "*",
+        "gulp-compass": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-csso": "*",
+        "gulp-uglify": "*",
+        "gulp-svgmin": "*",
+        "gulp-concat": "*"
+    }
 }

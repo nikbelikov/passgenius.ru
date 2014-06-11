@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
     uglify = require('gulp-uglify'),
-    svgmin = require('gulp-svgmin');
+    svgmin = require('gulp-svgmin'),
+    concat = require('gulp-concat');
 
 var paths = {
     sass: ['sass/**/*.sass'],
@@ -26,6 +27,13 @@ gulp.task('uglify', function() {
     gulp.src('js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('js/lib'))
+});
+
+gulp.task('plugins', function() {
+    gulp.src('js/plugins/*.js')
+        .pipe(concat('plugins.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/lib/'))
 });
 
 gulp.task('svgmin', function() {

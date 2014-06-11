@@ -105,9 +105,7 @@
 </section>
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/lib/quo.js"></script>
-<script src="js/lib/device.min.js"></script>
-<script src="js/lib/jquery.nouislider.min.js"></script>
+<script src="js/lib/plugins.min.js"></script>
 <script src="js/lib/init.js"></script>
 
 <!-- Google Analitycs counter -->
