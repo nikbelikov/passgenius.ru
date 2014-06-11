@@ -9,7 +9,6 @@ $(document).ready(function(){
 
 $(window).load(function(){
     $('#fade-box').fadeOut();
-    $('.content').removeClass('no-animation'); // см. initLocalStorage
     window.scrollTo(0, 0);
 });
 
@@ -74,9 +73,9 @@ initGeneratePass = function(){
         if (!$(this).hasClass('disabled')){
             $(this).addClass('disabled');
 
-            // генерируем пароль
             var change_pass_animation = 'flipInX';
 
+            // генерируем пароль
             $('.password').addClass('selectable')
                 .removeClass('small')
                 .html(GeneratePass(chars, length, no_repeat))
@@ -102,7 +101,7 @@ initGeneratePass = function(){
 
             // отмечаем текущий пароль активным
             $('.last-passwords ul li').removeClass('active');
-            $('.last-passwords ul li:first-child').addClass('active');
+            $('.last-passwords ul li:first').addClass('active');
 
             localStorage.setItem('lastPasswords', $('.last-passwords ul').html());
 
