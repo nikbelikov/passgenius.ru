@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
     uglify = require('gulp-uglify'),
-    svgmin = require('gulp-svgmin');
+    svgmin = require('gulp-svgmin'),
+    concat = require('gulp-concat');
 
 var paths = {
     sass: ['sass/**/*.sass'],
@@ -22,10 +23,25 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('uglify', function() {
-    gulp.src('js/*.js')
+gulp.task('init', function() {
+    gulp.src('js/init/*.js')
+        .pipe(concat('init.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('js/lib'))
+        .pipe(gulp.dest('js/assets/'))
+});
+
+gulp.task('plugins', function() {
+    gulp.src('js/plugins/*.js')
+        .pipe(concat('plugins.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/assets/'))
+});
+
+gulp.task('modules', function() {
+    gulp.src(['js/modules/*.js', 'js/functions/*.js'])
+        .pipe(concat('modules.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/assets/'))
 });
 
 gulp.task('svgmin', function() {

@@ -36,6 +36,7 @@ sup
     width: 640px
     margin: 0 auto
     min-height: 100%
+    overflow: hidden
     height: auto !important
     height: 100%
     transition: opacity .2s ease, transform .2s ease
@@ -47,16 +48,42 @@ sup
 
     .content
         position: relative
-        top: -20px
+        left: -40px
         height: 0
         opacity: 0
         padding: 0
-        transition: top .5s ease, opacity .5s ease, height .5s ease
+        +clearfix
+        transition: left .5s ease, opacity .5s ease, height .5s ease
+
+        .main-element
+            position: relative
+            left: -80px
+            opacity: 0
+            transition: none
+
+        &.main-about
+            .main-element
+                left: 80px
 
         &.active
-            top: 0
+            left: 0 !important
             opacity: 1
             height: auto
+
+            .last-passwords-icon
+                position: absolute !important
+                left: 96px !important
+
+            .main-element
+                position: relative
+                left: 0
+                opacity: 1
+                transition: left .5s, opacity 1s
+
+                @for $i from 2 through 7
+                    &:nth-child(#{$i})
+                        $val: $i/30
+                        transition-delay: #{$val}s
 
 #fade-box
     width: 100%
@@ -77,7 +104,6 @@ header
         top: -11px
 
 .main-content, .main-about
-    overflow: hidden
     padding-top: 35px
 
 .main-about p
