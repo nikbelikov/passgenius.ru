@@ -79,7 +79,7 @@
 </div>
 
 <script>
-    $(document).ready(function(){
+    $(function(){
         $('.desk-apple').hover(function(){
             $('.main-scheme').addClass('hid');
             $('.rounded-ui').addClass('vis');

@@ -105,8 +105,9 @@
 </section>
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/lib/plugins.min.js"></script>
-<script src="js/lib/init.js"></script>
+<script src="js/assets/plugins.min.js"></script>
+<script src="js/assets/init.min.js"></script>
+<script src="js/assets/modules.min.js"></script>
 
 <!-- Google Analitycs counter -->
 <script>
