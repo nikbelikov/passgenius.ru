@@ -52,7 +52,7 @@ gulp.task('svgmin', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
-    gulp.watch(paths.js, ['uglify']);
+    gulp.watch(paths.js, ['modules']);
 });
 
-gulp.task('default', ['sass', 'uglify']);
+gulp.task('default', ['sass', 'init', 'modules']);
