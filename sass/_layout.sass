@@ -44,7 +44,6 @@ sup
     &.blur
         opacity: 0
         transform: scale(0.9)
-        filter: grayscale(100%)
 
     .content
         position: relative
@@ -57,13 +56,13 @@ sup
 
         .main-element
             position: relative
-            transform: translate(-80px,0)
+            transform: translate3d(-80px,0,0)
             opacity: 0
             transition: none
 
         &.main-about
             .main-element
-                transform: translate(80px,0)
+                transform: translate3d(80px,0,0)
 
         &.active
             left: 0 !important
@@ -72,17 +71,16 @@ sup
 
             .last-passwords-icon
                 position: absolute !important
-                transform: translate(-370px,0) !important
 
             .main-element
                 position: relative
-                transform: translate(0,0)
+                transform: translate3d(0,0,0)
                 opacity: 1
                 transition: transform .5s, opacity 1s
 
-                @for $i from 2 through 7
+                @for $i from 1 through 7
                     &:nth-child(#{$i})
-                        $val: $i/30
+                        $val: $i/10
                         transition-delay: #{$val}s
 
 #fade-box
