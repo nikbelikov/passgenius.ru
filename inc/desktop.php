@@ -81,7 +81,9 @@
 </div>
 
 <script>
-    var skrollr = skrollr.init();
+    if ($('html').hasClass('desktop')) {
+        var skrollr = skrollr.init();
+    }
 
     $(function(){
         $('.desk-apple').hover(function(){
