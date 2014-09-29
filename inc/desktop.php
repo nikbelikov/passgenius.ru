@@ -3,7 +3,7 @@
     <div class="main-desc">Простой генератор паролей для iPhone</div>
 
     <div class="text-center iphone-image">
-        <img width="335" src="img/iphone.png" alt="iphone"/>
+        <img width="400" src="img/iphone.png" alt="iphone"/>
     </div>
 
     <h1 data-0="transform:scale(0.5)" data-600="transform:scale(1)">Как пользоваться?</h1>
@@ -23,7 +23,7 @@
         <img width="64" class="icon desk-settings" src="img/svg/min/settings.svg" alt="settings"/>
         <span>Добавлена возможность настраивать пароль</span>
         <img width="60" class="icon desk-apple" src="img/svg/min/apple.svg" alt="apple"/>
-        <span>Работает на всех современных iPhone*</span>
+        <span>Работает на всех современных iPhone</span>
     </p>
 
     <h1 data-1000="transform:scale(0.3)" data-1500="transform:scale(1)">Предыдущие версии</h1>
@@ -63,7 +63,6 @@
 
     <div class="footer" data-1500="transform:scale(0.5)" data-2000="transform:scale(1)">
         <p class="text-center">
-            *На iPhone 6 и 6 Plus пока не проверялся.<br/>
             Специально для iPhone.<br>
             Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a>
         </p>
