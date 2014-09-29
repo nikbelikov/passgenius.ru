@@ -29,7 +29,6 @@
 <div class="wrapper">
 
     <header>
-        <img width="52" height="52" src="img/svg/min/lock.svg" alt="logo">
         <span class="name">PassGenius</span>
 
         <ul class="list-btn">
@@ -40,7 +39,7 @@
 
     <section class="content main-content active">
 
-        <img class="last-passwords-icon hidden-hard main-element" width="35" src="img/svg/min/list.svg" alt="last-passwords">
+        <img class="last-passwords-icon hidden-hard main-element" width="40" src="img/svg/min/list.svg" alt="last-passwords">
 
         <div class="canvas-wrapper main-element">
             <div class="canvas">
