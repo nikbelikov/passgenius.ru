@@ -44,6 +44,12 @@ gulp.task('modules', function() {
         .pipe(gulp.dest('js/assets/'))
 });
 
+gulp.task('concatjs', function() {
+    gulp.src(['js/assets/plugins.min.js', 'js/assets/init.min.js', 'js/assets/modules.min.js'])
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest('js/assets/'))
+});
+
 gulp.task('svgmin', function() {
     return gulp.src('img/svg/*.svg')
         .pipe(svgmin())
@@ -55,4 +61,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.js, ['modules']);
 });
 
-gulp.task('default', ['sass', 'init', 'modules']);
+gulp.task('build', ['sass', 'init', 'modules', 'concatjs']);
