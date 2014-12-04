@@ -12,9 +12,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="PassGenius" />
 
-    <link rel="apple-touch-startup-image" href="startup-image.png" />
-    <link rel="apple-touch-startup-image" href="startup-image-iphone5.png" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
-
     <meta name="viewport" content="width=640, user-scalable=no">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
