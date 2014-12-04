@@ -25,6 +25,7 @@
 <body>
 
 <div id="fade-box"></div>
+<div id="orientation">Держите телефон вертикально</div>
 
 <div class="wrapper">
 

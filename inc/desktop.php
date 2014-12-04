@@ -30,7 +30,7 @@
     <div class="row versions" data-1000="transform:scale(0.5)" data-1800="transform:scale(1)">
         <div class="col-4">
             <a href="/1"><img height="198" src="img/svg/min/v1.svg" alt="scheme"/></a>
-            <h2>2011</h2>
+            <h2>v1.0</h2>
             <ol>
                 <li>выбор символов для алфавита</li>
                 <li>выбор количества символов в пароле</li>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-4">
             <a href="/2"><img height="198" src="img/svg/min/v2.svg" alt="scheme"/></a>
-            <h2>2012</h2>
+            <h2>v2.0</h2>
             <ol>
                 <li>разделение на большой сайт и мобильный (сам генератор работает только на устройствах с iOS)</li>
                 <li>поддержка всех популярных iPhone (на тот момент), включая iPhone 5 и старый 3Gs</li>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-4">
             <a href="/3"><img height="198" src="img/svg/min/v3.svg" alt="scheme"/></a>
-            <h2>2013</h2>
+            <h2>v3.0</h2>
             <ol>
                 <li>новый дизайн в стиле iOS7 с красивой анимацией</li>
                 <li>дневная и ночная темы</li>
