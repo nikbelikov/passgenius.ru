@@ -8,14 +8,14 @@
         <img width="400" src="img/iphone.png" alt="iphone"/>
     </div>
 
-    <h1 data-0="transform:scale(0.5)" data-600="transform:scale(1)">Как пользоваться?</h1>
-    <p class="text-center how-to-use" data-0="transform:scale(0.5)" data-800="transform:scale(1)">
+    <h1>Как пользоваться?</h1>
+    <p class="text-center how-to-use">
         <img width="238" src="img/svg/min/homescreen.svg" alt="homescreen"/>
         <span>Зайдите на этот сайт со своего iPhone и добавьте страницу на рабочий стол.</span>
     </p>
 
-    <h1 data-0="transform:scale(0.5)" data-1000="transform:scale(1)">Что нового?</h1>
-    <p class="text-center features" data-0="transform:scale(0.3)" data-1200="transform:scale(1)">
+    <h1>Что нового?</h1>
+    <p class="text-center features">
         <img class="main-scheme" src="img/svg/min/main-scheme.svg" alt="scheme"/>
         <img width="296" height="296" class="rounded-ui" src="img/rounded-ui.png" alt="ui"/>
         <img width="68" class="icon desk-pencil" src="img/svg/min/pencil.svg" alt="pencil"/>
@@ -28,8 +28,8 @@
         <span>Работает на всех современных iPhone</span>
     </p>
 
-    <h1 data-1000="transform:scale(0.3)" data-1500="transform:scale(1)">Предыдущие версии</h1>
-    <div class="row versions" data-1000="transform:scale(0.5)" data-1800="transform:scale(1)">
+    <h1>Предыдущие версии</h1>
+    <div class="row versions">
         <div class="col-4">
             <a href="/1"><img height="198" src="img/svg/min/v1.svg" alt="scheme"/></a>
             <h2>v1.0</h2>
@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="footer" data-1500="transform:scale(0.5)" data-2000="transform:scale(1)">
+    <div class="footer">
         <p class="text-center">
             Специально для iPhone.<br>
             Разработка: <a href="http://nikbelikov.ru/" target="_blank">nikbelikov.ru</a>
@@ -78,15 +78,9 @@
             PassGenius.ru
         </p>
     </div>
-
-    <script src="/js/desktop/skrollr.min.js"></script>
 </div>
 
 <script>
-    if ($('html').hasClass('desktop')) {
-        var skrollr = skrollr.init();
-    }
-
     $(function(){
         $('.desk-apple').hover(function(){
             $('.main-scheme').addClass('hid');
