@@ -5,7 +5,7 @@
     <div class="main-desc">Простой генератор паролей для iPhone</div>
 
     <div class="text-center iphone-image">
-        <img width="400" src="img/iphone.svg" alt="iphone"/>
+        <img width="400" src="img/iphone.png" alt="iphone"/>
     </div>
 
     <h1 data-0="transform:scale(0.5)" data-600="transform:scale(1)">Как пользоваться?</h1>
@@ -17,7 +17,7 @@
     <h1 data-0="transform:scale(0.5)" data-1000="transform:scale(1)">Что нового?</h1>
     <p class="text-center features" data-0="transform:scale(0.3)" data-1200="transform:scale(1)">
         <img class="main-scheme" src="img/svg/min/main-scheme.svg" alt="scheme"/>
-        <img width="296" height="296" class="rounded-ui" src="img/rounded-ui.svg" alt="ui"/>
+        <img width="296" height="296" class="rounded-ui" src="img/rounded-ui.png" alt="ui"/>
         <img width="68" class="icon desk-pencil" src="img/svg/min/pencil.svg" alt="pencil"/>
         <span class="">Новый дизайн с красивой анимацией</span>
         <img width="68" class="icon desk-svg" src="img/svg/min/svg.svg" alt="svg"/>
