@@ -58,7 +58,7 @@ gulp.task('svgmin', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
-    gulp.watch(paths.js, ['modules']);
+    gulp.watch(paths.js, ['js']);
 });
 
-gulp.task('build', ['sass', 'init', 'modules', 'concatjs']);
+gulp.task('js', ['init', 'modules', 'concatjs']);
