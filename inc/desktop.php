@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/desktop.css">
-
 <div id='desktop'>
     <div class="main-title">PassGenius.ru</div>
     <div class="main-desc">Простой генератор паролей для iPhone</div>
