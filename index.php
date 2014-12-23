@@ -12,9 +12,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="PassGenius" />
 
-    <link rel="apple-touch-startup-image" href="startup-image.png" />
-    <link rel="apple-touch-startup-image" href="startup-image-iphone5.png" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
-
     <meta name="viewport" content="width=640, user-scalable=no">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
@@ -25,6 +22,7 @@
 <body>
 
 <div id="fade-box"></div>
+<div id="orientation">Держите телефон вертикально</div>
 
 <div class="wrapper">
 
@@ -104,51 +102,7 @@
 </section>
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="js/assets/plugins.min.js"></script>
-<script src="js/assets/init.min.js"></script>
-<script src="js/assets/modules.min.js"></script>
-
-<!-- Google Analitycs counter -->
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39701630-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-<!-- /Google Analitycs counter -->
-
-<!-- Yandex.Metrika counter -->
-<script>
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter20781985 = new Ya.Metrika({id:20781985,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true});
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/20781985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+<script src="js/assets/main.min.js"></script>
 
 </body>
 </html>
