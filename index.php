@@ -76,9 +76,9 @@
         <p class="main-element">Также вы можете помочь в развитии проекта на GitHub.</p>
 
         <p class="main-element">Ранние версии:<br>
-            <a href="/1" target="_blank">v1.0</a>,
-            <a href="/2" target="_blank">v2.0</a> + <a class="blue" href="/2/presentation" target="_blank">презентация</a>,
-            <a href="/3" target="_blank">v3.0</a>
+            <a href="1/" target="_blank">v1.0</a>,
+            <a href="2/" target="_blank">v2.0</a> + <a class="blue" href="2/presentation" target="_blank">презентация</a>,
+            <a href="3/" target="_blank">v3.0</a>
         </p>
 
         <p class="main-element">Специально для iPhone.<br>

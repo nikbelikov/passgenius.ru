@@ -29,7 +29,7 @@
     <h1>Предыдущие версии</h1>
     <div class="row versions">
         <div class="col-4">
-            <a href="/1"><img height="198" src="img/svg/min/v1.svg" alt="scheme"/></a>
+            <a href="1"><img height="198" src="img/svg/min/v1.svg" alt="scheme"/></a>
             <h2>v1.0</h2>
             <ol>
                 <li>выбор символов для алфавита</li>
@@ -38,7 +38,7 @@
             </ol>
         </div>
         <div class="col-4">
-            <a href="/2"><img height="198" src="img/svg/min/v2.svg" alt="scheme"/></a>
+            <a href="2"><img height="198" src="img/svg/min/v2.svg" alt="scheme"/></a>
             <h2>v2.0</h2>
             <ol>
                 <li>разделение на большой сайт и мобильный (сам генератор работает только на устройствах с iOS)</li>
@@ -50,7 +50,7 @@
             </ol>
         </div>
         <div class="col-4">
-            <a href="/3"><img height="198" src="img/svg/min/v3.svg" alt="scheme"/></a>
+            <a href="3"><img height="198" src="img/svg/min/v3.svg" alt="scheme"/></a>
             <h2>v3.0</h2>
             <ol>
                 <li>новый дизайн в стиле iOS7 с красивой анимацией</li>

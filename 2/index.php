@@ -89,7 +89,7 @@
 			<a href="https://github.com/nikbelikov/passgenius.ru" target="_blank"><img src="img/icon-git.png" alt="github"></a>
 			<a href="https://twitter.com/_nikbelikov" target="_blank"><img src="img/icon-twitter.png" alt="twitter"></a>
 			<a href="mailto:nikbelikov@me.com"><img src="img/icon-mail.png" alt="mail"></a>
-			<a href="/2/presentation/" target="_blank"><img src="img/icon-presentation.png" alt="presentation"></a>
+			<a href="../passgenius/2/presentation/" target="_blank"><img src="img/icon-presentation.png" alt="presentation"></a>
 		</p>
 
 		<p>2012 (с)<br>
